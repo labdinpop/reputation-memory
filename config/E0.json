@@ -1,0 +1,39 @@
+{
+  "L": 100,
+  "T0": 5000,
+  "T1": 2000,
+  "sample_every": 10,
+  "R": 30,
+  "w": 0.5,
+  "K": 0.1,
+  "eta": 1e-06,
+  "epsilon": 0.0,
+  "update": "synchronous",
+  "initial": "exactly half, uniformly sampled; truthful repeated buffers",
+  "gap_definition": "pooled over all site-time pairs in sampled coexistence rounds",
+  "stationarity": {
+    "half_difference": 0.02,
+    "fraction": 0.1,
+    "retry_T0": 10000
+  },
+  "required": [
+    "weight normalization",
+    "truthful records at epsilon=0",
+    "W1=E1 pathwise",
+    "w=0 neutrality",
+    "G=sum(h*C_y), W/E/PP, epsilon=0 and .05, relative tolerance 1e-9 plus EMA tail",
+    "Bernoulli flips within three standard errors",
+    "Szabo-Toke automated benchmark"
+  ],
+  "experiment": "E0",
+  "identity": {
+    "observed_records": true,
+    "relative_tolerance": 1e-09,
+    "EMA_tail_below": 1e-12
+  },
+  "identity_L": 50,
+  "identity_epsilon": [
+    0,
+    0.05
+  ]
+}

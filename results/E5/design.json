@@ -1,0 +1,2602 @@
+{
+  "configuration": {
+    "L": 100,
+    "T0": 5000,
+    "T1": 2000,
+    "sample_every": 10,
+    "R": 30,
+    "w": 0.5,
+    "K": 0.1,
+    "eta": 1e-06,
+    "epsilon": [
+      0,
+      0.005,
+      0.01,
+      0.02,
+      0.05,
+      0.1
+    ],
+    "update": "synchronous",
+    "initial": "exactly half, uniformly sampled; truthful repeated buffers",
+    "gap_definition": "pooled over all site-time pairs in sampled coexistence rounds",
+    "stationarity": {
+      "half_difference": 0.02,
+      "fraction": 0.1,
+      "retry_T0": 10000
+    },
+    "kernels": [
+      "W",
+      "E"
+    ],
+    "M": [
+      1,
+      2,
+      3,
+      5,
+      9,
+      17,
+      33
+    ],
+    "b": [
+      "b_A",
+      "b_B"
+    ],
+    "experiment": "E5",
+    "requires": "explicit author approval of checkpoint 1",
+    "identity": {
+      "observed_records": true,
+      "relative_tolerance": 1e-09,
+      "EMA_tail_below": 1e-12
+    },
+    "noise_result": "relative_gap_discrepancy=(G-G_approx)/G, with G_approx=(1-2epsilon)*sum(h*C_s)"
+  },
+  "points": [
+    {
+      "name": "W_c9c02a338f660ad2",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 1,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_5bda8153062b5271",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 1,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_573c1178d115ab53",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 1,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_29c3e9a5be719783",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 1,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_3a2101d6f380e994",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 1,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_764334c33704f64f",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 1,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_6509888caec43e33",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 2,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_dfea5e742140adc2",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 2,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_a26f9ad523a33af4",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 2,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_bfe568b88384d7fd",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 2,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_65c7de1649fdda9d",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 2,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_1696effa9b6732b7",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 2,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_a9215f077df2dba7",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 3,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_3cabf84eb390a121",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 3,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_92ee47d74b98b70f",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 3,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_3ce1f1ddf92f2454",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 3,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_bdc424ef9a51455e",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 3,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_24aa8413ca054e8f",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 3,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_311ed34dc7ab7b8b",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 5,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_0de95d72df64863d",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 5,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_3fe0c4185c064770",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 5,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_ac7dce9c7cc36e80",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 5,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_364a534a93ec4fa6",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 5,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_46a7e755ccfb1090",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 5,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_6436168b5e9bc91c",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 9,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_35f62698a884123e",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 9,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_d4411a086e1f3db8",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 9,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_d8329e0227d8617c",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 9,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_e841dddf9f4386f6",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 9,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_80d26d797461c719",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 9,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_f6b9d7b5ab685e07",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 17,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_e2fcaf0a7a6e91f5",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 17,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_fe5d9e7ee64df530",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 17,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_808f3fb1c58e850d",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 17,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_b6c1033ff9ba6757",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 17,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_dbd32eafd1b3de1e",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 17,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_3fa6292ec9bb9dc8",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 33,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_0189f4f4df1d9303",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 33,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_3b7512d7b2c88864",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 33,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_9fb6d4872f8368bb",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 33,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_125f56e3d1ba0595",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 33,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_d0af9195fe43887c",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.15,
+        "M": 33,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_f43efc0f07c9d07f",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 1,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_0c6beb5c701b64b4",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 1,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_77ae46e65c111ea4",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 1,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_dd104a27e815dd6c",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 1,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_b1fbeeeecb11595f",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 1,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_60576752467a2e8f",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 1,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_5556c03981dfbbc4",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 2,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_614cc6852378d6e1",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 2,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_36788d22c33814c4",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 2,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_43bf3bb26724a67d",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 2,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_a75c73b0c425c192",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 2,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_98861cda9e69b89f",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 2,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_8e9e38f424ecce83",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 3,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_ce8ec230dc1090ed",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 3,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_50c5e75d41eb5851",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 3,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_ef08852fc8c6d08e",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 3,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_bfbc141724f84173",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 3,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_15f69df6154b8e19",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 3,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_34ed8d4c5c10f600",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 5,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_d3f9633ba3553a2e",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 5,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_dc3bfb956d2c52a0",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 5,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_b81e6d0f9e2b6344",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 5,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_c1b57f53b3d516a5",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 5,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_64cd6a1c5b04d8d3",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 5,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_278a28c04643fbfb",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 9,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_594f39ab1540b2f0",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 9,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_746f0a00cd7ab5b1",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 9,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_864a17177f7396c1",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 9,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_0a029d88c6ffb319",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 9,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_01cd5975f3d8e7a3",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 9,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_f5fd10c51a9e545f",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 17,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_90aa4ce52144e1ee",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 17,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_e8c047f6b1328c9a",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 17,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_7aac6d5d8c82ae80",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 17,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_d487bf32c2e70d42",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 17,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_36a06046ac43754c",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 17,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_1cf56598a34e7de3",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 33,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_ac49d709841a01c4",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 33,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_3a0cc1f8124683f5",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 33,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_66edf67aafaee2c3",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 33,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_1ea4ea2f5eedeaef",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 33,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_4097f00796e3043d",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.15,
+        "M": 33,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_7fd3ca682c297806",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 1,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_efe53d2ca9516f05",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 1,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_f24787b2784860c5",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 1,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_195d7a84d0d8e800",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 1,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_c8986de624bba25b",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 1,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_225deff97b662a4c",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 1,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_a0a6ecfb6a95de6f",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 2,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_d2988af104ccb7d7",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 2,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_4c3ac939d90c5061",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 2,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_7e95d5fe4777c864",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 2,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_c974df50f8138820",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 2,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_ef8ea51f72c119c7",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 2,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_5ad39a80094966b1",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 3,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_7f60222b10e293ac",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 3,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_7b6b63903ce2400c",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 3,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_624f9ac6c660e87d",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 3,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_3ff463f76fdd60f8",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 3,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_d365a6c4a1d61c99",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 3,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_d73c8db9dfee4320",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 5,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_63f1a09dc330dd82",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 5,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_7a51fc9fca4fe4e0",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 5,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_a89b20ce9a72ec5c",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 5,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_564746a712d1a976",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 5,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_35cd7713096478c2",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 5,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_443e266f3defe297",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 9,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_29d0cca5dce57e56",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 9,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_428f3828ff96f8e9",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 9,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_f919829e55394406",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 9,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_d91908cc4c56cdce",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 9,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_1b8c3102c8c30aff",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 9,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_e9e053542f8957c1",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 17,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_5ff75eb9fd6c8ae4",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 17,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_c7790f68495ef3b6",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 17,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_3289e8c8b73d639e",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 17,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_1959216f724da70c",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 17,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_bbecf7b68e3803c3",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 17,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_d9733d671a84a36b",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 33,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_16b7c1a21ab3b249",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 33,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_04531e659097a4a4",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 33,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_0fe2352a26e7685d",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 33,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_704f709291f1e896",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 33,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "W_f115b05a4b4c2c76",
+      "parameters": {
+        "kernel": "W",
+        "L": 100,
+        "b": 1.3,
+        "M": 33,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_726d574544e0d48c",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 1,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_ef654787f7cc2e08",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 1,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_809ac5e728129c52",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 1,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_dfeaca6dc88591a4",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 1,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_02e665e21167c73c",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 1,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_2d6989347765f4b0",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 1,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_ce6e933a8b882201",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 2,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_64c508c41c55a8ce",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 2,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_a4ebbe392bced611",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 2,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_56a01c9f573e37ee",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 2,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_33ff286c1e1cf4ce",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 2,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_ca1bf12f2576ea1d",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 2,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_b4a2dbbfc47af77b",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 3,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_af36ecfa0026fc61",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 3,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_867afd09396c33d1",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 3,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_c746ceecfe4abf43",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 3,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_e18f566ac99cfed3",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 3,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_7d730bab83f7d2e5",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 3,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_fc6e1a431a9744d0",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 5,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_7c82b16e6760b167",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 5,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_148c3692606f7efe",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 5,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_9ac31a4966d9c008",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 5,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_7afa66a623149f35",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 5,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_460f546637e6eecb",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 5,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_923fca262c7ef298",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 9,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_f44934a12a77a6b0",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 9,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_5fac5740a46593b5",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 9,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_4bfa2fa4d738cc8d",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 9,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_3aba46be48e6c451",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 9,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_35612a258976289b",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 9,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_cde8eefb24758c87",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 17,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_e789569d35d74268",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 17,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_1d17642d87a61883",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 17,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_fa482175e01c6200",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 17,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_147bf7855af930d6",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 17,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_bc05fc61d5367115",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 17,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_7127b87d805e6bae",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 33,
+        "epsilon": 0.0,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_1a277b2a90e70c89",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 33,
+        "epsilon": 0.005,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_b375372c45c48a94",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 33,
+        "epsilon": 0.01,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_0c5a6bfd7490448f",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 33,
+        "epsilon": 0.02,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_394f52999dc15ef0",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 33,
+        "epsilon": 0.05,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    },
+    {
+      "name": "E_878693edbd398b5a",
+      "parameters": {
+        "kernel": "E",
+        "L": 100,
+        "b": 1.3,
+        "M": 33,
+        "epsilon": 0.1,
+        "w": 0.5,
+        "K": 0.1,
+        "eta": 1e-06,
+        "update": "synchronous"
+      },
+      "R": 30
+    }
+  ],
+  "b_selection": {
+    "state": "selected",
+    "b_A": 1.15,
+    "b_B": 1.3,
+    "justification": [
+      {
+        "label": "A",
+        "b": 1.15,
+        "f_C": 0.4174289833333333,
+        "all_D": 0.0,
+        "rule": {
+          "min_fc": 0.4,
+          "max_all_D": 0.1
+        }
+      },
+      {
+        "label": "B",
+        "b": 1.3,
+        "f_C": 0.1500237,
+        "all_D": 0.0,
+        "rule": {
+          "min_fc": 0.1,
+          "max_all_D": 0.1
+        }
+      }
+    ]
+  }
+}

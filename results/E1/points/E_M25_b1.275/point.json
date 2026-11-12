@@ -1,0 +1,11 @@
+{
+  "state": "complete",
+  "point": "E_M25_b1.275",
+  "selected_file": "T0_10000.csv",
+  "T0": 10000,
+  "completed": 30,
+  "repeated": true,
+  "still_nonstationary": true,
+  "R": 30,
+  "nonstationary_fraction": 0.16666666666666666
+}

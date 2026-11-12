@@ -1,0 +1,76 @@
+{
+  "profiles": [
+    {
+      "kernel": "W",
+      "M": 9,
+      "L": 100,
+      "T0": 5000,
+      "T1": 2000,
+      "early_absorption_disabled": true,
+      "seconds": 2.9512971000076504
+    },
+    {
+      "kernel": "W",
+      "M": 65,
+      "L": 100,
+      "T0": 5000,
+      "T1": 2000,
+      "early_absorption_disabled": true,
+      "seconds": 2.7895533999981126
+    },
+    {
+      "kernel": "E",
+      "M": 9,
+      "L": 100,
+      "T0": 5000,
+      "T1": 2000,
+      "early_absorption_disabled": true,
+      "seconds": 3.244273099990096
+    },
+    {
+      "kernel": "E",
+      "M": 65,
+      "L": 100,
+      "T0": 5000,
+      "T1": 2000,
+      "early_absorption_disabled": true,
+      "seconds": 4.815553299995372
+    }
+  ],
+  "workers": 16,
+  "estimates": {
+    "30": {
+      "worker_hours": {
+        "E1": 19.417126000007556,
+        "E2": 0.0,
+        "E3": 2.410225965006248,
+        "E4": 0.0,
+        "E5": 5.663328416668871,
+        "E6": 0.8607949875022314,
+        "S1": 0.34431799500089255,
+        "S2": 3.689121375009563
+      },
+      "E1_E6_worker_hours": 28.351475369184907,
+      "E1_E6_elapsed_hours_at_70pct_efficiency": 2.5313817293915095,
+      "all_elapsed_hours_at_70pct_efficiency": 2.8915102445710144
+    },
+    "20": {
+      "worker_hours": {
+        "E1": 12.944750666671704,
+        "E2": 0.0,
+        "E3": 1.6068173100041652,
+        "E4": 0.0,
+        "E5": 3.775552277779247,
+        "E6": 0.8362008450021676,
+        "S1": 0.22954533000059504,
+        "S2": 2.4594142500063754
+      },
+      "E1_E6_worker_hours": 19.163321099457285,
+      "E1_E6_elapsed_hours_at_70pct_efficiency": 1.7110108124515433,
+      "all_elapsed_hours_at_70pct_efficiency": 1.95109648923788
+    }
+  },
+  "assumptions": "Worst profiled M per kernel; PP uses window upper timing; noise +25%; sequential x2; L scaling by site count. Independent stationarity retries excluded. Recalibrate before each experiment.",
+  "E1_release": "requires successful E0 audit matching current source",
+  "timing_runs": "Discarded from scientific datasets; no parameter-point estimates produced."
+}

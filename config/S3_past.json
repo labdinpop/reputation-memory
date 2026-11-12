@@ -1,0 +1,34 @@
+{
+  "L": 100,
+  "T0": 5000,
+  "T1": 2000,
+  "sample_every": 10,
+  "R": 30,
+  "K": 0.1,
+  "stationarity": {
+    "half_difference": 0.02,
+    "fraction": 0.1,
+    "retry_T0": 10000
+  },
+  "experiment": "S3_past",
+  "kernel": "PP",
+  "a": 0,
+  "m": [
+    1,
+    2,
+    3,
+    5,
+    10,
+    20
+  ],
+  "b": 1.15,
+  "eta": 1e-06,
+  "epsilon": 0,
+  "w": 1,
+  "workers": 6,
+  "author_approved": true,
+  "authorization": "2026-10-06: execute item 4; do not update article yet",
+  "selection": "purely proportional, unchanged model_s3 engine",
+  "initial": "exactly half cooperators; initial strategy repeated in buffers",
+  "update": "synchronous"
+}

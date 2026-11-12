@@ -1,0 +1,97 @@
+{
+  "E0_accepted": true,
+  "implementation_tests": {
+    "passed": 9,
+    "failures": 0,
+    "errors": 0
+  },
+  "identity_checks": [
+    {
+      "kernel": "W",
+      "epsilon": 0.0,
+      "L": 50,
+      "G": 0.23257483105770743,
+      "G_from_Cy": 0.23257483105770846,
+      "relative_error": 4.415595157514947e-15,
+      "tail_weight": 0.0,
+      "tolerance": 2.3257483105770744e-10,
+      "n_pairs": 50000,
+      "maximum_lag": 64
+    },
+    {
+      "kernel": "E",
+      "epsilon": 0.0,
+      "L": 50,
+      "G": 0.26759331554309773,
+      "G_from_Cy": 0.2675933155430247,
+      "relative_error": 2.7299887843636984e-13,
+      "tail_weight": 9.980734912884888e-13,
+      "tolerance": 2.6859138903438625e-10,
+      "n_pairs": 50000,
+      "maximum_lag": 897
+    },
+    {
+      "kernel": "PP",
+      "epsilon": 0.0,
+      "L": 50,
+      "G": 0.661212649228101,
+      "G_from_Cy": 0.6612126492281025,
+      "relative_error": 2.350699485694537e-15,
+      "tail_weight": 0.0,
+      "tolerance": 6.612126492281011e-10,
+      "n_pairs": 50000,
+      "maximum_lag": 8
+    },
+    {
+      "kernel": "W",
+      "epsilon": 0.05,
+      "L": 50,
+      "G": 0.2226592005270936,
+      "G_from_Cy": 0.22265920052709492,
+      "relative_error": 5.983438485346017e-15,
+      "tail_weight": 0.0,
+      "tolerance": 2.2265920052709361e-10,
+      "n_pairs": 50000,
+      "maximum_lag": 64
+    },
+    {
+      "kernel": "E",
+      "epsilon": 0.05,
+      "L": 50,
+      "G": 0.2679238978188641,
+      "G_from_Cy": 0.2679238978187987,
+      "relative_error": 2.440698149092752e-13,
+      "tail_weight": 9.980734912884888e-13,
+      "tolerance": 2.6892197131015263e-10,
+      "n_pairs": 50000,
+      "maximum_lag": 897
+    },
+    {
+      "kernel": "PP",
+      "epsilon": 0.05,
+      "L": 50,
+      "G": 0.599814712285842,
+      "G_from_Cy": 0.5998147122858473,
+      "relative_error": 8.699433523150349e-15,
+      "tail_weight": 0.0,
+      "tolerance": 5.998147122858421e-10,
+      "n_pairs": 50000,
+      "maximum_lag": 8
+    }
+  ],
+  "canonical_benchmark": {
+    "passed": true,
+    "test": "Canonical-rule coarse-regime regression; not a new estimate of the critical point",
+    "mean_b14": 0.5208601125,
+    "mean_b186": 0.0,
+    "new_realizations": 8
+  },
+  "canonical_benchmark_reused": "New simple-paper benchmark already completed; source unchanged",
+  "benchmark_csv_sha256": "ad4c0e782ec8f3bccff04ff41ae37ea92d2069d141adc137d28f9ac3cc871903",
+  "source_sha256": {
+    "src\\model.py": "17342fcbf5fc963a04ce77bd6e564a5cc7efd19c960d661d565297297c7b5a3c",
+    "src\\benchmark.py": "f937af69724773d763e468f6f09f30038a152510b13d604b1c42d4650b929a40",
+    "tests\\test_model.py": "5130f32c4db6585f36c2dda3a20b8d6baf3a4395fe9687c65ff036df49096d17",
+    "config\\E0.json": "89c42eb6be9868feb6e887acb36e7df37f262cbd0bc1b866523d28e845adc4b5"
+  }
+}

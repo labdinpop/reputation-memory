@@ -1,0 +1,23 @@
+{
+  "state": "complete",
+  "point": "W_3289e8c8b73d639e",
+  "parameters": {
+    "kernel": "W",
+    "L": 100,
+    "b": 1.3,
+    "M": 17,
+    "epsilon": 0.02,
+    "w": 0.5,
+    "K": 0.1,
+    "eta": 1e-06,
+    "update": "synchronous"
+  },
+  "R": 30,
+  "completed": 30,
+  "reused": false,
+  "selected_file": "T0_5000.csv",
+  "T0": 5000,
+  "repeated": false,
+  "still_nonstationary": false,
+  "nonstationary_fraction": 0.0
+}

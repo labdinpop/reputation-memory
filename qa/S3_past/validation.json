@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "m": 1,
+      "passed": true,
+      "direct_gap": 0.9912663755458515
+    },
+    {
+      "m": 2,
+      "passed": true,
+      "direct_gap": 0.9807477678571429
+    },
+    {
+      "m": 3,
+      "passed": true,
+      "direct_gap": 0.9790776408535236
+    },
+    {
+      "m": 5,
+      "passed": true,
+      "direct_gap": 0.9618016449827159
+    },
+    {
+      "m": 10,
+      "passed": true,
+      "direct_gap": 0.9361368209255534
+    },
+    {
+      "m": 20,
+      "passed": true,
+      "direct_gap": 0.9408265497808391
+    }
+  ],
+  "existing_S3_unchanged": true
+}

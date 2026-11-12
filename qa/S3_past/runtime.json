@@ -1,0 +1,13 @@
+{
+  "seconds_per_realization": 2.9244811999997182,
+  "total_realizations": 180,
+  "worker_hours": 0.14622405999998592,
+  "estimated_minutes": 2.088915142856942,
+  "source_sha256": {
+    "src/model_s3.py": "39746759b1ad1755b46234fa32c5ea13a2984318a7d227b34e285c7971c4f562",
+    "src/model_s3_past.py": "6b51a8cef27bf9c7fcb8ae79e291b635bf60f2ff94496d6ddbd9963f2d9588b8",
+    "src/run_s3_past.py": "7b6e7113bed43afe7587e1d3eeec197288c314545110cc499d8ef5791d14d229",
+    "config/S3_past.json": "462c5dca6df78688e0d0a8219f1198d60387bde60b73bc6ff3f543d6311ea7fc"
+  },
+  "notes": "Full L=100,m=20 protocol; estimate excludes possible T0=10000 retries."
+}

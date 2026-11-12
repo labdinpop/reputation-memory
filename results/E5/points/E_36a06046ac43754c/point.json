@@ -1,0 +1,24 @@
+{
+  "state": "complete",
+  "point": "E_36a06046ac43754c",
+  "parameters": {
+    "kernel": "E",
+    "L": 100,
+    "b": 1.15,
+    "M": 17,
+    "epsilon": 0.1,
+    "w": 0.5,
+    "K": 0.1,
+    "eta": 1e-06,
+    "update": "synchronous"
+  },
+  "R": 30,
+  "completed": 30,
+  "reused": false,
+  "selected_file": "T0_20000.csv",
+  "T0": 20000,
+  "repeated": true,
+  "still_nonstationary": true,
+  "nonstationary_fraction": 0.4,
+  "refinement_authorized": true
+}

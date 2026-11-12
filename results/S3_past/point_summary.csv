@@ -1,0 +1,7 @@
+kernel,a,m,L,b,eta,epsilon,R,T0,source,repeated,still_nonstationary,f_C,f_C_se,f_C_n,G,G_se,G_n,all_D,all_D_se,all_D_n,all_C,all_C_se,all_C_n,relative_gap_discrepancy,relative_gap_discrepancy_se,relative_gap_discrepancy_n,all_C_count,all_D_count,identity_max_error
+PP,0,1,100,1.15,1e-06,0,30,5000,results\S3_past\points\PP_a0_m01\T0_5000.csv,False,False,1.0,0.0,30,nan,nan,0,0.0,0.0,30,1.0,0.0,30,nan,nan,0,30,0,nan
+PP,0,2,100,1.15,1e-06,0,30,5000,results\S3_past\points\PP_a0_m02\T0_5000.csv,False,False,1.0,0.0,30,nan,nan,0,0.0,0.0,30,1.0,0.0,30,nan,nan,0,30,0,nan
+PP,0,3,100,1.15,1e-06,0,30,5000,results\S3_past\points\PP_a0_m03\T0_5000.csv,False,False,1.0,0.0,30,nan,nan,0,0.0,0.0,30,1.0,0.0,30,nan,nan,0,30,0,nan
+PP,0,5,100,1.15,1e-06,0,30,5000,results\S3_past\points\PP_a0_m05\T0_5000.csv,False,False,1.0,0.0,30,nan,nan,0,0.0,0.0,30,1.0,0.0,30,nan,nan,0,30,0,nan
+PP,0,10,100,1.15,1e-06,0,30,5000,results\S3_past\points\PP_a0_m10\T0_5000.csv,False,False,0.7563048,0.00036930644970416975,30,0.5063326787983348,0.00031391982227705305,30,0.0,0.0,30,0.0,0.0,30,-3.2819308239957378e-15,1.91700247148771e-16,30,0,0,2.6645352591003757e-15
+PP,0,20,100,1.15,1e-06,0,30,5000,results\S3_past\points\PP_a0_m20\T0_5000.csv,False,False,0.5322328666666667,0.00026687380561344796,30,0.3104834268807979,0.00022529641200888634,30,0.0,0.0,30,0.0,0.0,30,1.5978536386251362e-15,1.8281614447021954e-16,30,0,0,1.27675647831893e-15

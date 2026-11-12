@@ -1,0 +1,12 @@
+{
+  "state": "complete",
+  "point": "E_M17_b1.300",
+  "selected_file": "T0_20000.csv",
+  "T0": 20000,
+  "completed": 30,
+  "repeated": true,
+  "still_nonstationary": false,
+  "R": 30,
+  "nonstationary_fraction": 0.1,
+  "refinement_authorized": true
+}

@@ -1,0 +1,13 @@
+{
+  "state": "complete",
+  "eta": 0.01,
+  "M": 33,
+  "T0": 5000,
+  "R": 30,
+  "completed": 30,
+  "selected_file": "T0_5000.csv",
+  "source": "results\\S3_floors\\points\\eta_0.01_W_M33\\T0_5000.csv",
+  "repeated": false,
+  "still_nonstationary": false,
+  "nonstationary_fraction": 0.0
+}

@@ -1,0 +1,66 @@
+{
+  "L": 100,
+  "T0": 5000,
+  "T1": 2000,
+  "sample_every": 10,
+  "R": 30,
+  "w": 1,
+  "K": 0.1,
+  "eta": [
+    0,
+    1e-06,
+    0.01
+  ],
+  "epsilon": 0,
+  "update": "synchronous",
+  "initial": "exactly half, uniformly sampled; truthful repeated buffers",
+  "gap_definition": "pooled over all site-time pairs in sampled coexistence rounds",
+  "stationarity": {
+    "half_difference": 0.02,
+    "fraction": 0.1,
+    "retry_T0": 10000
+  },
+  "kernels": [
+    "W"
+  ],
+  "M": [
+    1,
+    2,
+    3,
+    5,
+    9,
+    17,
+    33
+  ],
+  "b": [
+    1.15
+  ],
+  "requires": "E0 passed and measurement definitions resolved",
+  "b_selection": {
+    "reference": "W9",
+    "A": {
+      "min_fc": 0.4,
+      "max_all_D": 0.1
+    },
+    "B": {
+      "min_fc": 0.1,
+      "max_all_D": 0.1
+    },
+    "minimum_separation": 0.05
+  },
+  "experiment": "S3",
+  "identity": {
+    "observed_records": true,
+    "relative_tolerance": 1e-09,
+    "EMA_tail_below": 1e-12
+  },
+  "author_approved": true,
+  "selection": "P(j|i)=(r_j+eta)/sum(r_k+eta), uniform when eta=0 and sum r=0",
+  "model_source": "src/model_s3.py",
+  "new_eta": [
+    1e-06,
+    0.01
+  ],
+  "floor_source": "Li 2026: PDF page 4 Eq. 6; page 7 baseline epsilon_R=1e-6; Li 2025 has no floor in Eq. 5",
+  "duplicate_request": "eta=1e-6 and the floor of [17] are the same case"
+}

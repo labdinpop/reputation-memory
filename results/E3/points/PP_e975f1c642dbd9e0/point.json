@@ -1,0 +1,25 @@
+{
+  "state": "complete",
+  "point": "PP_e975f1c642dbd9e0",
+  "parameters": {
+    "kernel": "PP",
+    "L": 100,
+    "b": 1.3,
+    "a": 0.1,
+    "m": 16,
+    "epsilon": 0.0,
+    "w": 0.5,
+    "K": 0.1,
+    "eta": 1e-06,
+    "update": "synchronous"
+  },
+  "R": 30,
+  "completed": 30,
+  "reused": false,
+  "selected_file": "T0_20000.csv",
+  "T0": 20000,
+  "repeated": true,
+  "still_nonstationary": true,
+  "nonstationary_fraction": 0.16666666666666666,
+  "refinement_authorized": true
+}

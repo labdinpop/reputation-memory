@@ -1,0 +1,105 @@
+{
+  "r2Past1fc": {
+    "file": "results/S3_past/points/PP_a0_m01/T0_5000.csv",
+    "field": "f_C",
+    "operation": "mean",
+    "scale": 1
+  },
+  "r2Past1fcSE": {
+    "file": "results/S3_past/points/PP_a0_m01/T0_5000.csv",
+    "field": "f_C",
+    "operation": "standard_error",
+    "scale": 1
+  },
+  "r2Past2fc": {
+    "file": "results/S3_past/points/PP_a0_m02/T0_5000.csv",
+    "field": "f_C",
+    "operation": "mean",
+    "scale": 1
+  },
+  "r2Past2fcSE": {
+    "file": "results/S3_past/points/PP_a0_m02/T0_5000.csv",
+    "field": "f_C",
+    "operation": "standard_error",
+    "scale": 1
+  },
+  "r2Past3fc": {
+    "file": "results/S3_past/points/PP_a0_m03/T0_5000.csv",
+    "field": "f_C",
+    "operation": "mean",
+    "scale": 1
+  },
+  "r2Past3fcSE": {
+    "file": "results/S3_past/points/PP_a0_m03/T0_5000.csv",
+    "field": "f_C",
+    "operation": "standard_error",
+    "scale": 1
+  },
+  "r2Past5fc": {
+    "file": "results/S3_past/points/PP_a0_m05/T0_5000.csv",
+    "field": "f_C",
+    "operation": "mean",
+    "scale": 1
+  },
+  "r2Past5fcSE": {
+    "file": "results/S3_past/points/PP_a0_m05/T0_5000.csv",
+    "field": "f_C",
+    "operation": "standard_error",
+    "scale": 1
+  },
+  "r2Past10fc": {
+    "file": "results/S3_past/points/PP_a0_m10/T0_5000.csv",
+    "field": "f_C",
+    "operation": "mean",
+    "scale": 1
+  },
+  "r2Past10fcSE": {
+    "file": "results/S3_past/points/PP_a0_m10/T0_5000.csv",
+    "field": "f_C",
+    "operation": "standard_error",
+    "scale": 1
+  },
+  "r2Past20fc": {
+    "file": "results/S3_past/points/PP_a0_m20/T0_5000.csv",
+    "field": "f_C",
+    "operation": "mean",
+    "scale": 1
+  },
+  "r2Past20fcSE": {
+    "file": "results/S3_past/points/PP_a0_m20/T0_5000.csv",
+    "field": "f_C",
+    "operation": "standard_error",
+    "scale": 1
+  },
+  "r2PastW": "config/S3_past.json:w",
+  "r2PastFullGrid": {
+    "files": [
+      "results/S3_past/points/PP_a0_m01/T0_5000.csv",
+      "results/S3_past/points/PP_a0_m02/T0_5000.csv",
+      "results/S3_past/points/PP_a0_m03/T0_5000.csv",
+      "results/S3_past/points/PP_a0_m05/T0_5000.csv",
+      "results/S3_past/points/PP_a0_m10/T0_5000.csv",
+      "results/S3_past/points/PP_a0_m20/T0_5000.csv"
+    ],
+    "operation": "all_cooperator_points"
+  },
+  "r2PastGrid": "config/S3_past.json:m",
+  "r2PastLongOne": "config/S3_past.json:m[-2]",
+  "r2PastLongTwo": "config/S3_past.json:m[-1]",
+  "r2PastTotalRuns": {
+    "files": [
+      "results/S3_past/points/PP_a0_m01/T0_5000.csv",
+      "results/S3_past/points/PP_a0_m02/T0_5000.csv",
+      "results/S3_past/points/PP_a0_m03/T0_5000.csv",
+      "results/S3_past/points/PP_a0_m05/T0_5000.csv",
+      "results/S3_past/points/PP_a0_m10/T0_5000.csv",
+      "results/S3_past/points/PP_a0_m20/T0_5000.csv"
+    ],
+    "operation": "row_count"
+  },
+  "r2LiReferenceNumber": "citation order in sources/paper.tex",
+  "r2DriftAt10000": {
+    "file": "revision_data/residual_drift.csv",
+    "operation": "count_T0_10000"
+  }
+}

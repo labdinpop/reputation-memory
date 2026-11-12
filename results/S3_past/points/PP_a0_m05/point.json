@@ -1,0 +1,12 @@
+{
+  "state": "complete",
+  "m": 5,
+  "T0": 5000,
+  "R": 30,
+  "completed": 30,
+  "selected_file": "T0_5000.csv",
+  "source": "results\\S3_past\\points\\PP_a0_m05\\T0_5000.csv",
+  "repeated": false,
+  "still_nonstationary": false,
+  "nonstationary_fraction": 0.0
+}

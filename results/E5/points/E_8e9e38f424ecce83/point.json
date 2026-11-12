@@ -1,0 +1,23 @@
+{
+  "state": "complete",
+  "point": "E_8e9e38f424ecce83",
+  "parameters": {
+    "kernel": "E",
+    "L": 100,
+    "b": 1.15,
+    "M": 3,
+    "epsilon": 0.0,
+    "w": 0.5,
+    "K": 0.1,
+    "eta": 1e-06,
+    "update": "synchronous"
+  },
+  "R": 30,
+  "completed": 30,
+  "reused": true,
+  "source_csv": "results\\E1\\points\\E_M03_b1.150\\T0_5000.csv",
+  "source_sha256": "9ec4db8cda4b4c4d54462d7a04798234510c474596e7ad6dde6c282b0a874112",
+  "T0": 5000,
+  "repeated": false,
+  "still_nonstationary": false
+}

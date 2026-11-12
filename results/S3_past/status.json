@@ -1,0 +1,83 @@
+{
+  "state": "complete",
+  "pid": 30932,
+  "workers": 6,
+  "points": [
+    {
+      "state": "complete",
+      "m": 1,
+      "T0": 5000,
+      "R": 30,
+      "completed": 30,
+      "selected_file": "T0_5000.csv",
+      "source": "results\\S3_past\\points\\PP_a0_m01\\T0_5000.csv",
+      "repeated": false,
+      "still_nonstationary": false,
+      "nonstationary_fraction": 0.0
+    },
+    {
+      "state": "complete",
+      "m": 2,
+      "T0": 5000,
+      "R": 30,
+      "completed": 30,
+      "selected_file": "T0_5000.csv",
+      "source": "results\\S3_past\\points\\PP_a0_m02\\T0_5000.csv",
+      "repeated": false,
+      "still_nonstationary": false,
+      "nonstationary_fraction": 0.0
+    },
+    {
+      "state": "complete",
+      "m": 3,
+      "T0": 5000,
+      "R": 30,
+      "completed": 30,
+      "selected_file": "T0_5000.csv",
+      "source": "results\\S3_past\\points\\PP_a0_m03\\T0_5000.csv",
+      "repeated": false,
+      "still_nonstationary": false,
+      "nonstationary_fraction": 0.0
+    },
+    {
+      "state": "complete",
+      "m": 5,
+      "T0": 5000,
+      "R": 30,
+      "completed": 30,
+      "selected_file": "T0_5000.csv",
+      "source": "results\\S3_past\\points\\PP_a0_m05\\T0_5000.csv",
+      "repeated": false,
+      "still_nonstationary": false,
+      "nonstationary_fraction": 0.0
+    },
+    {
+      "state": "complete",
+      "m": 10,
+      "T0": 5000,
+      "R": 30,
+      "completed": 30,
+      "selected_file": "T0_5000.csv",
+      "source": "results\\S3_past\\points\\PP_a0_m10\\T0_5000.csv",
+      "repeated": false,
+      "still_nonstationary": false,
+      "nonstationary_fraction": 0.0
+    },
+    {
+      "state": "complete",
+      "m": 20,
+      "T0": 5000,
+      "R": 30,
+      "completed": 30,
+      "selected_file": "T0_5000.csv",
+      "source": "results\\S3_past\\points\\PP_a0_m20\\T0_5000.csv",
+      "repeated": false,
+      "still_nonstationary": false,
+      "nonstationary_fraction": 0.0
+    }
+  ],
+  "completed": 180,
+  "total": 180,
+  "complete_points": 6,
+  "manuscript_unchanged": true
+}

@@ -1,0 +1,56 @@
+{
+  "L": 100,
+  "T0": 5000,
+  "T1": 2000,
+  "sample_every": 10,
+  "R": 30,
+  "w": 1,
+  "K": 0.1,
+  "eta": 0,
+  "epsilon": 0,
+  "update": "synchronous",
+  "initial": "exactly half, uniformly sampled; truthful repeated buffers",
+  "gap_definition": "pooled over all site-time pairs in sampled coexistence rounds",
+  "stationarity": {
+    "half_difference": 0.02,
+    "fraction": 0.1,
+    "retry_T0": 10000
+  },
+  "kernels": [
+    "W"
+  ],
+  "M": [
+    1,
+    2,
+    3,
+    5,
+    9,
+    17,
+    33
+  ],
+  "b": [
+    1.15
+  ],
+  "requires": "E0 passed and measurement definitions resolved",
+  "b_selection": {
+    "reference": "W9",
+    "A": {
+      "min_fc": 0.4,
+      "max_all_D": 0.1
+    },
+    "B": {
+      "min_fc": 0.1,
+      "max_all_D": 0.1
+    },
+    "minimum_separation": 0.05
+  },
+  "experiment": "S3",
+  "identity": {
+    "observed_records": true,
+    "relative_tolerance": 1e-09,
+    "EMA_tail_below": 1e-12
+  },
+  "author_approved": true,
+  "selection": "Li2025 Eq5 factor r_j / sum r_k; uniform if sum=0; all other dynamics retained",
+  "model_source": "src/model_s3.py"
+}

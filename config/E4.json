@@ -1,0 +1,36 @@
+{
+  "L": 100,
+  "T0": 5000,
+  "T1": 2000,
+  "sample_every": 10,
+  "R": 30,
+  "w": 0.5,
+  "K": 0.1,
+  "eta": 1e-06,
+  "epsilon": 0.0,
+  "update": "synchronous",
+  "initial": "exactly half, uniformly sampled; truthful repeated buffers",
+  "gap_definition": "pooled over all site-time pairs in sampled coexistence rounds",
+  "stationarity": {
+    "half_difference": 0.02,
+    "fraction": 0.1,
+    "retry_T0": 10000
+  },
+  "source": [
+    "E1",
+    "E3"
+  ],
+  "new_runs": 0,
+  "experiment": "E4",
+  "requires": "explicit author approval of checkpoint 1",
+  "identity": {
+    "observed_records": true,
+    "relative_tolerance": 1e-09,
+    "EMA_tail_below": 1e-12
+  },
+  "figure_panels": [
+    "C_s",
+    "present and past contributions to G",
+    "f_C versus G"
+  ]
+}

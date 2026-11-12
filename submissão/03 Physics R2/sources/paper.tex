@@ -1,0 +1,318 @@
+% Official MDPI template downloaded on 6 October 2026; Physics submission.
+\documentclass[physics,article,submit,moreauthors]{Definitions/mdpi}
+\graphicspath{{figures/}}
+\input{numbers.tex}
+\input{typography.tex}
+\newcommand{\W}{\mathrm{W}}
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\PP}{\mathrm{PP}}
+\newcommand{\res}[2]{\val{#1-#2}\pm\val{#1-#2SE}}
+\setlength{\emergencystretch}{3em}
+\setlength{\headheight}{25pt}
+\addtolength{\topmargin}{-13pt}
+\firstpage{1}
+\makeatletter\setcounter{page}{\@firstpage}\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2026}
+\copyrightyear{2026}
+\datereceived{ }
+\daterevised{ }
+\dateaccepted{ }
+\datepublished{ }
+\hreflink{https://doi.org/}
+\Title{The Influence of Reputation Memory on Cooperation in a Spatial Prisoner's Dilemma}
+\TitleCitation{The Influence of Reputation Memory on Cooperation in a Spatial Prisoner's Dilemma}
+\Author{Pedro H. T. Schimit $^{1,*}$, Pedro Aranha $^{1}$, Marco A. R. Fontoura $^{1}$, Wellington de Lima Barreto $^{1}$ and Abimael R. S\'ergio $^{1}$}
+\AuthorNames{Pedro H. T. Schimit, Pedro Aranha, Marco A. R. Fontoura, Wellington de Lima Barreto and Abimael R. S\'ergio}
+\AuthorCitation{Schimit, P.H.T.; Aranha, P.; Fontoura, M.A.R.; Barreto, W.L.; S\'ergio, A.R.}
+\address[1]{Informatics and Knowledge Management Graduate Program, Universidade Nove de Julho, S\~ao Paulo, Brazil}
+\corres{Correspondence: schimit@alumni.usp.br}
+\abstract{Spatial evolutionary games provide a setting for studying collective behavior in nonequilibrium statistical physics. We examine how memory changes cooperation in a weak prisoner's dilemma, where public reputation influences which lattice neighbor is chosen for imitation. Increasing the number of remembered actions also reduces the weight of the current action. We separate these effects by comparing window and exponential memory with a rule that varies the current weight and the number of past rounds independently. Longer memories reduce cooperation when neighbor choice combines reputation with random sampling. Giving more weight to the current action increases cooperation, while extending the past reduces it even when that weight is fixed. We relate these changes in the population to the reputation difference between current cooperators and defectors and to temporal correlations of their strategies. Using only the current action gives the highest cooperation among the cases studied, including observation error probabilities up to \val{n0.1}. Errors generally cause larger losses with longer memories. The results show how retaining information about previous states can weaken cooperation in a stochastic lattice system whose local updates depend on that information.}
+\keyword{nonequilibrium statistical physics; collective behavior; spatial evolutionary games; reputation; memory; cooperation}
+\begin{document}
+\section{Introduction}
+The emergence of cooperation from local interactions is a problem of collective behavior in nonequilibrium statistical physics. Spatial evolutionary games describe this problem through individuals on a lattice, with strategies that change according to the states of nearby individuals. Nowak and May~\cite{nowak1992} placed unconditional cooperators and defectors on a lattice and updated strategies according to local success. Their deterministic model produced changing spatial patterns in which both strategies could persist, without memory of previous encounters. Szab\'o and F\'ath~\cite{szabo2007} reviewed how evolutionary games on graphs connect local rules, population structure, and collective behavior. Perc et al.~\cite{perc2017} place these models within statistical physics by relating local stochastic updates to population densities, spatial patterns, and absorbing states. This approach shares the description of interacting local states used in lattice models of physics. The transition probabilities are specified by imitation and payoffs, rather than by an equilibrium energy function. Spatial structure nevertheless works together with the update rule. Roca et al.~\cite{roca2009} reviewed how temporal and spatial effects depend on the dynamics used to revise strategies. Huberman and Glance~\cite{huberman1993} showed that changing synchronous to asynchronous updates could replace coexistence with defection in the spatial game they examined. These studies show why both the available information and the order of updating need to be considered when defining the model.
+
+Reputation allows individuals to consider previous behavior when choosing whom to imitate. Tak\'acs et al.~\cite{takacs2021} reviewed the connection between cooperation, reputation reliability, and the network through which information is exchanged. A closely related imitation mechanism was studied by Wang et al.~\cite{wang2012}. Reputation accumulates cooperative actions: cooperation increases the score, while defection leaves it unchanged. With an individual-specific probability, a player chooses the highest-reputation neighbor as its role model; otherwise, it chooses a random neighbor. Adoption then depends on the payoff difference through a Fermi rule. This preference supports cooperation by helping cooperators form robust clusters. Quan et al.~\cite{quan2020} combined payoff and reputation through evidence theory in public goods games, finding that greater importance assigned to reputation favors cooperation. Li et al.~\cite{li2021} increased reputation after cooperation and decreased it after defection in spatial multigames. Preference for reputable learning partners promoted compact cooperative clusters. These examples distinguish the choice of whom to imitate from the decision to adopt that individual's strategy. Here, reputation changes only the first step, while the neighbors with whom each individual plays remain fixed.
+
+Memory has been included in evolutionary games in different ways. Shu et al.~\cite{shu2019} retained each player's highest payoff and its associated strategy within a finite historical window. The choice of a neighbor depends on its previous success, and the strategy associated with that success can be imitated. Xu et al.~\cite{xu2024} recorded a player's recent strategies and incorporated their persistence into the Fermi update rule. More frequent past use of the current strategy increases resistance to changing it, and stronger memory supports cooperation. Pi et al.~\cite{pi2024} accumulated historical payoffs with finite memory and decay in a population combining payoff imitators and reinforcement learners. Both types of individuals use these accumulated payoffs to update their behavior. Xia et al.~\cite{xia2020} instead considered discriminators who assess recipients from remembered actions using social norms. A tolerance threshold applied to these assessments determines whether a discriminator cooperates. These models store different information and use it at different steps of the dynamics. Han et al.~\cite{han2021} linked historical memory to the frequency of reputation updates in a spatial public goods game. Lv et al.~\cite{lv2023} also considered current and historical reputations in a spatial public goods game. Here, the number of past records and the weight of the current action vary separately, while reputation is updated every round.
+
+Recent reputation models further illustrate these differences. Quan et al.~\cite{quan2024} used a bounded cumulative reputation score whose increments depend on the player's action and its social context. They varied the assessment increment and the probability of choosing the most reputable neighbor, finding that larger increments could inhibit cooperation. Their reputation score accumulates over time, without keeping a fixed number of previous rounds. Yang and Yang~\cite{yang2025} combined reputation based on strategy changes with memory of how long the learner and its chosen neighbor maintained their strategies. They varied the relative influence of these memories at a fixed memory length, with combined reputation preference and memory supporting cooperation. Li et al.~\cite{li2025} defined reputation as the frequency of cooperation in a finite window and used it to choose whom to imitate, allowing individuals to differ in their sensitivity to payoff differences. Varying the window produced an intermediate memory length with the highest cooperation. Li et al.~\cite{li2026} likewise used remembered cooperative actions in reputation tables to guide imitation, also allowing these sensitivities to differ between individuals. They found more cooperation with an intermediate number of remembered rounds than with short or long memories. A basic issue remains when reputation averages an individual's past actions. When the average includes the current action, increasing memory length reduces its weight while extending the historical record. A recent defector may therefore retain a favorable reputation, while a recent cooperator may retain an unfavorable one. This distinction matters when reputation determines who becomes a role model. Varying these two aspects separately allows us to examine their influence on cooperation.
+
+Errors in the records can also affect the influence of reputation. Li et al.~\cite{li2025} identify perfect reputation tracking as a limitation, since observation errors or deception can distort assessments. Uchida~\cite{uchida2010} and Hilbe et al.~\cite{hilbe2018} showed how private, imperfect information creates disagreements that can destabilize cooperation under indirect reciprocity. Schmid et al.~\cite{schmid2023} found that quantitative assessments can support cooperation with unreliable private information, while Murase and Hilbe~\cite{murase2024} related cooperation to correlations between observers' opinions. In those settings, assessments help determine whether individuals cooperate with recipients, and private observations can produce disagreement. Here, everyone has access to the same record, including an erroneous entry. Strategies remain unconditional, so the error affects the choice of whom to imitate without creating disagreement between observers.
+
+Our contribution is a controlled comparison of two effects of reputation memory within an existing framework of imitation on a lattice. We vary the weight given to the current action separately from the number of past rounds in a weak prisoner's dilemma. All individuals have the same sensitivity to payoff differences. Cooperation increases with the first quantity and decreases with the second in the cases studied. We examine this collective behavior through local transition probabilities, temporal correlations, observation errors, and population size. Section~\ref{sec:model} presents the model, Section~\ref{sec:results} describes the results, and Sections~\ref{sec:discussion} and~\ref{sec:conclusion} present the discussion and conclusions.
+
+\section{Model}\label{sec:model}
+Each lattice site has a strategy and a reputation calculated from its recorded history. Payoffs govern strategy adoption, while reputation influences the neighbor chosen for imitation.
+
+\subsection{Lattice and game}
+Let us consider a population on a square lattice of size $L\times L$, with periodic boundaries and a von Neumann neighborhood. Each individual interacts with its four nearest neighbors, whose set is denoted by $\mathcal N_i$ for individual $i$. The strategy $s_i(t)$ equals one for cooperation and zero for defection. Strategies are unconditional: an individual uses the same action with every neighbor during a round.
+
+The matrix $A$ gives the payoff from each interaction in the weak prisoner's dilemma. The total payoff $\pi_i(t)$ sums the payoffs of individual $i$ from its four neighbors in round $t$. We normalize this total by the largest possible payoff, $4b$, to obtain $g_i(t)$. These quantities are given by
+\begin{equation}
+ A=\begin{pmatrix}1&0\\b&0\end{pmatrix},\qquad
+ \pi_i(t)=[s_i(t)+b(1-s_i(t))]\sum_{j\in\mathcal N_i}s_j(t),\qquad
+ g_i(t)=\frac{\pi_i(t)}{4b},
+ \label{eq:payoff}
+\end{equation}
+where rows and columns of $A$ are ordered as cooperation and defection, and $b>1$ is the temptation to defect. For $b>1$, the payoffs satisfy $T>R>P=S$, with normalized dilemma strengths $D'_g=b-1>0$ and $D'_r=0$. Thus, the game lies on the boundary between the prisoner's dilemma and Chicken (Snowdrift) games~\cite{tanimoto2007}. The simulations also include $b=1$, where $T=R$; they do not sample the interior of the prisoner's dilemma region, which requires $P>S$. There is no self-interaction or mutation. Initially, exactly half of the sites are chosen uniformly to cooperate.
+
+\subsection{Observation and reputation memory}
+At each round, the action of every individual is observed and entered into a public record. We denote the entry for individual $i$ in round $t$ by $y_i(t)$. A value of one records cooperation, and a value of zero records defection. The record is public because all individuals have access to the same entry for a given individual and round.
+
+The observation may be wrong. We denote by $\varepsilon$ the probability of recording the opposite of the action actually taken. Thus, $y_i(t)=s_i(t)$ with probability $1-\varepsilon$, and $y_i(t)=1-s_i(t)$ with probability $\varepsilon$. A cooperator can therefore be recorded as a defector, and a defector as a cooperator. Errors occur independently across individuals and rounds; they change the record without changing the action played in that round. When $\varepsilon=0$, all records are correct. This noise concerns observation of the action, distinct from an error in executing an action or applying a social norm to assess it.
+
+Reputation summarizes these records. We write $r_i(t+1)$ for the reputation of individual $i$ after observing round $t$ and before updating strategies. To calculate it, we use the current entry and entries from earlier rounds, assigning a weight to each one.
+
+The index $\ell$ denotes the age of an entry, measured in rounds: $\ell=0$ refers to the current round, and $\ell=1$ to the preceding round. Accordingly, $y_i(t-\ell)$ is the entry for individual $i$ from $\ell$ rounds earlier. Its weight is $h_\ell$, which determines how much that entry contributes to reputation. The weights are nonnegative and sum to one, so reputation is a weighted average between zero and one:
+\begin{equation}
+ r_i(t+1)=\sum_{\ell\geq0}h_\ell y_i(t-\ell),\qquad
+ h_\ell\geq0,\qquad\sum_{\ell\geq0}h_\ell=1.
+ \label{eq:reputation}
+\end{equation}
+Different choices of the weights define different memory rules, also called kernels. We denote the weight of the current entry by $a=h_0$. The remaining weights determine how much influence earlier actions retain.
+
+We first consider window memory, $\W(M)$, where the positive integer $M$ is the number of entries retained, including the current one. Each of these entries has weight $1/M$, and older entries have zero weight. We also consider exponential memory, $\E(M)$, where the weight decreases with the age of the entry. In this rule, $\alpha$ is the weight of the current entry, and each additional round of age multiplies the weight by $1-\alpha$. We choose $\alpha=2/(M+1)$ so that both rules have the same average record age for a given $M$:
+\begin{equation}
+ h_\ell^{\W}=\frac{1}{M}\mathbf{1}_{\{0\leq\ell<M\}},\qquad
+ h_\ell^{\E}=\alpha(1-\alpha)^\ell,\qquad
+ \alpha=\frac{2}{M+1}.
+ \label{eq:kernels}
+\end{equation}
+The superscripts $\W$ and $\E$ identify the memory rule associated with each weight. The indicator $\mathbf{1}_{\{0\leq\ell<M\}}$ equals one when the entry belongs to the window and zero otherwise. The average record age is $(M-1)/2$ for both rules. For exponential memory, $M$ therefore sets the decay of the weights, rather than a fixed cutoff in the stored past.
+
+Exponential reputation follows $r_i(t+1)=(1-\alpha)r_i(t)+\alpha y_i(t)$. Both rules use only the current record at $M=1$; increasing $M$ reduces its weight and gives more influence to earlier actions.
+
+To separate these two changes, we introduce the present--past rule, denoted by $\PP(a,m)$. Here, $a$, with $0\leq a\leq1$, is the weight assigned to the current entry. The main comparisons use $a>0$; the boundary $a=0$ is examined separately with proportional selection in Figure~S3. The positive integer $m$ is the number of preceding rounds included, excluding the current round. Their entries share the remaining weight $1-a$ equally, while entries older than $m$ rounds have zero weight:
+\begin{equation}
+ h_0^{\PP}=a,\qquad
+ h_\ell^{\PP}=\frac{1-a}{m}\quad(1\leq\ell\leq m),\qquad
+ h_\ell^{\PP}=0\quad(\ell>m).
+ \label{eq:pp}
+\end{equation}
+The superscript $\PP$ identifies weights for this third rule. We can change $a$ while keeping the number of past rounds fixed, or change $m$ while keeping the current weight fixed. The average record age is $(1-a)(m+1)/2$. Window memory is recovered with $a=1/M$ and $m=M-1$ for $M>1$. For $a=1$, only the current action contributes, so we simulate this case once for each combination of the other parameters.
+
+Figure~\ref{fig:weights} shows how the weights change with the age of a record for each memory rule. Before the first simulated round, the stored entries for each individual are filled with its initial strategy. For exponential memory, we likewise set the initial reputation to $r_i(0)=s_i(0)$. This initialization gives each individual a consistent record before its first update. Observation errors are introduced from the first simulated round. The stored records feed back into subsequent strategy updates. Consequently, the current strategy configuration alone generally does not determine the next-step probabilities; the reputation history is also needed.
+\begin{figure}[htbp]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering\includegraphics[width=12.8cm]{fig01_memory_weights.pdf}
+\caption{Weights of $\W(\val{n9})$, $\E(\val{n9})$, and $\PP(\val{n0.4},\val{n8})$ as a function of record age. The exponential tail continues beyond the displayed range.}
+\label{fig:weights}
+\end{adjustwidth}
+\end{figure}
+
+\subsection{Choice of a Neighbor and Strategy Updating}
+Before changing strategy, each individual chooses one of its four neighbors as a possible model to imitate. This choice combines random sampling with a preference for neighbors who have higher reputations. The parameter $w$, between zero and one, sets the balance between these two ways of choosing.
+
+With probability $1-w$, the individual chooses among its four neighbors with equal probability. With probability $w$, it chooses in proportion to each neighbor's reputation plus a small positive offset $\eta$. This offset gives every neighbor a chance of being chosen, including those whose reputation is zero. Writing $P(j\mid i)$ for the probability that individual $i$ chooses neighbor $j$, we obtain
+\begin{equation}
+ P(j\mid i)=\frac{1-w}{4}
+       +w\frac{r_j(t+1)+\eta}{\sum_{k\in\mathcal N_i}[r_k(t+1)+\eta]}.
+ \label{eq:reference}
+\end{equation}
+After choosing a neighbor, the individual compares their payoffs to decide whether to adopt that neighbor's strategy. We use the Fermi rule: a neighbor with a higher payoff is more likely to be imitated. The parameter $K>0$ controls how strongly adoption responds to the difference between the normalized payoffs $g_i$ and $g_j$. The probability of adoption is
+\begin{equation}
+ P(s_i\leftarrow s_j)=\frac{1}{1+\exp[(g_i-g_j)/K]}.
+ \label{eq:fermi}
+\end{equation}
+The Fermi function gives a stochastic local update, as commonly used in the statistical physics of evolutionary games~\cite{perc2017}. Here, $K$ controls sensitivity to dimensionless payoff differences; it is not a thermodynamic temperature. Reputation affects the choice of whom to imitate, while adoption depends on the current normalized payoffs. We fix $w=\val{w}$ and $K=\val{K}$ to compare memory rules at the same preference and sensitivity. The chosen $K$ sets a reference scale for payoff differences within $0\leq g_i\leq1$ and retains stochastic adoption; it was not fitted to observations. The dependence on $K$ and $w$ is not systematically explored. The parameter $\eta$ sets the effective local bias $w\mathcal R/(\mathcal R+4\eta)$, where $\mathcal R=\sum_{k\in\mathcal N_i}r_k$, so even small differences in reputation can affect this choice when $\eta$ is small.
+
+The standard update is synchronous. In each round, actions are recorded, reputations and payoffs are calculated, and each individual chooses a neighbor. All strategies are then updated together. We also examine random sequential updating because update order can change spatial evolutionary dynamics~\cite{huberman1993}. In that case, reputations are updated once at the start of a sweep; each site is then updated once in random order, with current payoffs recalculated. An automated test uses the Szab\'o--T\H{o}ke stochastic lattice model, a reference for cooperation and absorbing states in spatial games~\cite{szabo1998}.
+
+\subsection{Simulations and measures}
+Table~\ref{tab:parameters} gives the common simulation parameters. After discarding the transient, we sample the population every $\val{sample_every}$ rounds. For each run, we average the fraction of cooperators over the measurement period. The reported cooperation $f_C$ is then the average across runs. This density summarizes the collective composition of the lattice, while the fraction of absorbed runs records the loss of one strategy. Runs in which all individuals defect contribute zero, and those in which all cooperate contribute one. We also record how often each of these outcomes occurs.
+
+\begin{table}[htbp]
+\centering
+\caption{Simulation parameters and the two values of $b$ used for the detailed comparisons. The transient is extended according to the criterion described in the text.}
+\label{tab:parameters}
+\begin{tabular}{lll}\toprule
+Quantity & Symbol & Value \\\midrule
+Main lattice size & $L$ & $\val{L}$ \\
+Additional lattice sizes & $L$ & $\val{n50},\ \val{n200}$ \\
+Selected temptations & $b_A,b_B$ & $\val{bA},\ \val{bB}$ \\
+Reputation preference & $w$ & $\val{w}$ \\
+Fermi sensitivity & $K$ & $\val{K}$ \\
+Reputation offset & $\eta$ & $\val{eta}$ \\
+Standard transient & $T_0$ & $\val{T0}$ rounds \\
+Extended transients & $T_0$ & $\val{retryT},\ \val{refineT}$ rounds \\
+Measurement window & $T_1$ & $\val{T1}$ rounds \\
+Sampling interval & & $\val{sample_every}$ rounds \\
+Independent realizations & $R$ & $\val{R}$; $\val{n20}$ for $L=\val{n200}$ \\\bottomrule
+\end{tabular}
+\end{table}
+
+Window and exponential memories use $M\in\{\val{Mgrid}\}$, with $b$ from $\val{n1}$ to $\val{n1.6}$ in steps of $\val{n0.025}$. We select $b_A$ and $b_B$ from the $\W(\val{n9})$ map before comparing the present--past rule and the cases with errors. They are the largest tested values of $b$ with mean cooperation at least $\val{n0.4}$ and $\val{n0.1}$, respectively, and all-defector fractions at most $\val{n10}\%$. This gives $b_A=\val{bA}$ and $b_B=\val{bB}$. For the present--past rule, we use $a\in\{\val{agrid}\}$ and $m\in\{\val{mgrid}\}$.
+
+For errors in the records, we use $\varepsilon\in\{\val{epsgrid}\}$. For both values of $b$, we use $M\in\{\val{Mgrideps}\}$. For the comparison between population sizes, we use $\W(\val{n1})$, $\W(\val{n9})$, and $\W(\val{n33})$, with $\varepsilon=0$ or $\val{n0.02}$. Uncertainty is the standard deviation across independent realizations divided by the square root of their number; error bars show one standard error. A difference between the averages of the two halves of the measurement period exceeding $\val{n0.02}$ in more than $\val{n10}\%$ of realizations requires a longer transient. After these extensions, $\val{totalDrift}$ parameter combinations still show a drift, including $\val{stillFlagged}$ after $\val{refineT}$ rounds. A supplementary data table (\texttt{residual\_drift.csv}) lists their parameters, transient durations, and affected fractions.
+
+Homogeneous strategy configurations are absorbing: copying a neighbor cannot restore a strategy that has disappeared. This remains true with observation errors, which can change reputations but cannot create a missing strategy. We therefore distinguish coexistence during the observation period from absorption of the strategy configuration.
+
+We compare the reputations of current cooperators and defectors to examine whether the stored records still distinguish their behavior. Quan et al.~\cite{quan2020norms} also compared the average reputations of cooperators and defectors in a spatial public goods game. A positive difference means that cooperators have higher reputations on average. A difference near zero means that the two strategies have similar average reputations, even though individual reputations may differ. This global quantity does not specify the reputations or payoffs in each neighborhood, which determine the local transition probabilities.
+
+For each realization, let $\Omega$ contain the pairs $(i,t)$ from sampled rounds in which both strategies exist. Each pair uses reputation $r_i(t+1)$ after observation and strategy $s_i(t)$ before imitation. Pooling these pairs gives the conditional means $\langle r\mid s=1\rangle_\Omega$ and $\langle r\mid s=0\rangle_\Omega$, with equal weight per pair within each strategy. Their difference defines the reputation gap:
+\begin{equation}
+ G=\langle r\mid s=1\rangle_\Omega-\langle r\mid s=0\rangle_\Omega
+   =\frac{\operatorname{Cov}_\Omega(r,s)}{\operatorname{Var}_\Omega(s)}.
+ \label{eq:gap}
+\end{equation}
+These are pooled means, distinct from averages of the separate round means. Covariance and variance use the same pairs and denominator $|\Omega|$. For binary $s$, writing $p=\langle s\rangle_\Omega$ gives $\operatorname{Var}_\Omega(s)=p(1-p)$ and $\operatorname{Cov}_\Omega(r,s)=p(1-p)G$, which establishes the equality.
+
+A run is excluded from the average gap if the two strategies never coexist during measurement, because one conditional mean is then undefined. We record how often this occurs, while keeping all runs in the averages of cooperation and absorption. Reported gaps are averages of the defined values across independent realizations.
+
+To understand which records contribute to the gap, we examine their association with the current strategy at the same site. For a record of age $\ell$, $C_y(\ell)$ uses the observed entry $y_i(t-\ell)$, while $C_s(\ell)$ uses the true past strategy $s_i(t-\ell)$. We use the same pairs in $\Omega$ and divide each covariance by the variance of the current strategy, as in Eq.~\eqref{eq:gap}:
+\begin{equation}
+ C_y(\ell)=\frac{\operatorname{Cov}_\Omega[y_i(t-\ell),s_i(t)]}
+                   {\operatorname{Var}_\Omega[s_i(t)]},\qquad
+ C_s(\ell)=\frac{\operatorname{Cov}_\Omega[s_i(t-\ell),s_i(t)]}
+                   {\operatorname{Var}_\Omega[s_i(t)]}.
+ \label{eq:correlations}
+\end{equation}
+These quantities describe how much past records or strategies differ between individuals who currently cooperate and those who currently defect. In statistical-physics terms, $C_s$ is a connected temporal correlation at the same site, normalized by the variance of the current state. In particular, $C_s(0)=1$, because at zero lag its numerator and denominator are the same variance. Substituting the weighted reputation from Eq.~\eqref{eq:reputation} into the covariance in Eq.~\eqref{eq:gap} separates the contribution of each record. Linearity of covariance then gives
+\begin{equation}
+ G=\sum_{\ell\geq0}h_\ell C_y(\ell).
+ \label{eq:identity}
+\end{equation}
+Equation~\eqref{eq:identity} is an algebraic consequence of the reputation definition and the binary strategy variable. It holds even outside a stationary regime, provided that both sides use the same observations and sample moments. Without errors, $C_y=C_s$. The current action then contributes $a$ to the gap, while past actions contribute according to their weights and correlations with the current strategy. This connects the memory weights to microscopic persistence and to the reputation difference that influences local imitation. For exponential memory, we keep enough past records for the remaining weight to fall below $\val{tailTolerance}$. The identity is checked with a relative tolerance of $\val{identityTolerance}$, allowing for that residual. This verifies consistency of the measurements; it supplies no independent evidence that the gap determines cooperation.
+
+Finally, we compare the measured gap with a simple approximation for observation errors. A symmetric recording error changes the expected entry associated with a true action $s$ to $\varepsilon+(1-2\varepsilon)s$. If the recording errors were uncorrelated with the current strategy in the measured sample, the constant term would vanish from the covariance. The remaining factor would give $C_y(\ell)=(1-2\varepsilon)C_s(\ell)$. This motivates the approximate gap $G_{\mathrm{approx}}$ and its relative discrepancy $\delta_G$, defined when $G\ne0$:
+\begin{equation}
+ G_{\mathrm{approx}}=(1-2\varepsilon)\sum_{\ell\geq0}h_\ell C_s(\ell),
+ \qquad \delta_G=\frac{G-G_{\mathrm{approx}}}{G}.
+ \label{eq:approx}
+\end{equation}
+Unlike Eq.~\eqref{eq:identity}, this expression requires an assumption about the errors. The correlations in the approximation come from the noisy realization itself. An error in an earlier round can change who is imitated later. It can therefore become correlated with the current strategy, which makes this relation an approximation. Thus $\delta_G$ measures how much the gap differs from the value obtained by multiplying the measured correlations by $1-2\varepsilon$. Both the correlations and the gap depend on how the population evolves under each memory rule. Codex assisted with preparation of the simulation and analysis scripts and with drafting the text; numerical results were obtained from the specified simulation code.
+
+\section{Results}\label{sec:results}
+We first examine how memory changes the collective composition and spatial patterns of the lattice under the window and exponential rules. We then vary the weight of the current action and the number of past rounds separately, and relate the results to the reputation gap. The last two subsections consider errors in the records and different population sizes.
+
+\subsection{Memory length and cooperation}
+Figure~\ref{fig:phase} shows the cooperation maps for window and exponential memory. Cooperation decreases as more rounds are remembered. Regions with zero cooperation correspond to absorption in populations containing only defectors during the simulated period. Their extent can depend on population size, as examined in Figure~\ref{fig:size}. At $b_A=\val{bA}$, window memory changes from $f_C=\val{W1A-fc}$ when only the current action is used to $\val{W65A-fc}$ at the longest sampled memory. The corresponding exponential values are $\val{E1A-fc}$ and $\val{E65A-fc}$.
+
+\begin{figure}[htbp]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering\includegraphics[width=16.6cm]{fig02_phase_map.pdf}
+\caption{Mean cooperation as a function of memory length and $b$ for (a) window and (b) exponential memory, with (c) curves at $b_A$ and $b_B$. Here $L=\val{L}$ and $\varepsilon=0$; marker size indicates the all-defector fraction, and small horizontal marker offsets separate the two rules. Error bars indicate one standard error across realizations.}
+\label{fig:phase}
+\end{adjustwidth}
+\end{figure}
+
+At the larger value of $b$, cooperation is more easily lost when memory is long. At $b_B=\val{bB}$, $\W(\val{n1})$ has mean cooperation $\val{W1B-fc}$, whereas every realization with $\W(\val{n65})$ ends in all-defection. Exponential memory shows the same qualitative change. The same decrease is therefore observed for rules with the same average record age, although the values at which cooperation becomes low depend on the weights.
+
+Figure~\ref{fig:space} displays the spatial configurations behind these averages. For each case, we order the runs by their average cooperation and show the one in the middle. At $b_A$, increasing window length produces smaller cooperative regions surrounded by defectors. At $b_B$, the long-window example reaches all-defection, while shorter windows retain cooperative patches. Sites whose neighbors all use the same strategy as themselves cannot change strategy by imitation. The growth or loss of cooperative regions therefore depends on changes at contacts between the two strategies. These final configurations describe their spatial arrangement, without measuring the formation or lifetime of individual clusters.
+
+\begin{figure}[htbp]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering\includegraphics[width=16.6cm]{fig03_spatial_configurations.pdf}
+\caption{Final configurations for $\W(\val{n1})$, $\W(\val{n9})$, and $\W(\val{n33})$, with rows corresponding to $b_A$ and $b_B$. Blue denotes cooperation; each panel shows the middle-ranked realization by time-averaged cooperation and reports its final cooperator fraction.}
+\label{fig:space}
+\end{adjustwidth}
+\end{figure}
+
+\subsection{Present versus past}
+The present--past rule allows us to examine separately the two changes caused by a longer window. Figure~\ref{fig:pp} shows that increasing $a$ raises cooperation at fixed $m$ for all parameter combinations studied. For example, at $b_A$ and $m=\val{n32}$, increasing $a$ from $\val{n0.1}$ to $\val{n0.4}$ changes $f_C$ from $\val{PP0.1m32A-fc}$ to $\val{PP0.4m32A-fc}$.
+
+\begin{figure}[htbp]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering\includegraphics[width=16.6cm]{fig04_present_past.pdf}
+\caption{Cooperation for present--past memory at (a) $b_A$ and (b) $b_B$, and (c) curves with fixed weight of the current action. Window points follow $a=1/M$, $m=M-1$; $a=1$ is repeated only for display, and the unfilled region lies outside the present--past grid. Here $L=\val{L}$, $\varepsilon=0$, color scales span zero to one, and error bars show one standard error.}
+\label{fig:pp}
+\end{adjustwidth}
+\end{figure}
+
+The number of past rounds also affects cooperation. With $a=\val{n0.2}$ at $b_A$, extending $m$ from $\val{n1}$ to $\val{n32}$ reduces cooperation from $\val{PP0.2m1A-fc}$ to $\val{PP0.2m32A-fc}$. At $b_B$, the corresponding values are $\val{PP0.2m1B-fc}$ and $\val{PP0.2m32B-fc}$. This reduction occurs for every tested value of $a$ below one. Thus, older records still affect cooperation when the weight of the current action is kept fixed.
+
+The window points shown on the maps combine a decrease in $a$ with an increase in $m$. Both changes reduce cooperation. When only the current action is used, the past no longer contributes and $m$ has no effect. Both changes modify the historical information entering the local transition probabilities. Together, they account for the decrease in collective cooperation observed with window memory.
+
+\subsection{Reputation gap and strategy persistence}
+Figure~\ref{fig:gap}(a) shows that older actions are less closely related to an individual's current strategy. This decay depends on the memory rule because the same reputation rule also changes imitation. Equation~\eqref{eq:identity} relates these correlations to the reputation gap. An old action that is weakly correlated with the current strategy contributes less to the gap than the current action. The memory rule thus weights temporal correlations generated by the same lattice dynamics that it influences.
+
+\begin{figure}[htbp]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering\includegraphics[width=16.6cm]{fig05_reputation_gap.pdf}
+\caption{(a) Strategy persistence, (b) present and past contributions to the reputation gap, and (c) cooperation versus gap at the selected values of $b$. The first two panels compare $\W(\val{n9})$, $\E(\val{n9})$, and $\PP(\val{n0.4},\val{n8})$; the last includes all memory parameters studied at those temptations, including only runs in which the gap can be calculated. Error bars indicate one standard error across realizations.}
+\label{fig:gap}
+\end{adjustwidth}
+\end{figure}
+
+Figure~\ref{fig:gap}(b) separates the contributions of the current action and the past to the reputation gap. At $b_A$, $\W(\val{n9})$ gives $G=\val{W9A-gap}$, while $\E(\val{n9})$ gives $\val{E9A-gap}$. The two rules have the same average record age, but exponential memory gives more weight to the current action. The present--past example gives $G=\val{PP0.4m8A-gap}$, where $a$ directly sets the contribution of the current action.
+
+Cooperation generally increases with the gap in Fig.~\ref{fig:gap}(c), although the points for the different memory rules do not follow a single curve. At $b_A$, $G$ is about $\val{PP0.1m32A-gap}$ for both rules $\PP(\val{n0.1},\val{n32})$ and $\E(\val{n49})$. Their cooperation levels are $\val{PP0.1m32A-fc}$ and $\val{E49A-fc}$, respectively. Both estimates include coexistence in all realizations. The gap describes how well reputation distinguishes cooperators from defectors. Their arrangement in space and changes over time also affect cooperation.
+
+\subsection{Observation errors}
+Figure~\ref{fig:errors} compares memory lengths under constant observation errors. This noise acts on the information entering local updates, separately from the randomness of Fermi adoption. It changes the probabilities of imitation without directly flipping strategies. Using only the current action gives the highest average cooperation for all tested values of $b$ and $\varepsilon$, under both memory rules. The highest value is still found at $M^*=\val{optimum}$ as $\varepsilon$ increases to $\val{n0.1}$. For each combination of parameters, this maximum is unique among the tested lengths, and its interval of one standard error does not overlap those of the other lengths. We therefore find no intermediate memory length that gives more cooperation within this range.
+
+\begin{figure}[htbp]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering\includegraphics[width=16.6cm]{fig06_observation_errors.pdf}
+\caption{Cooperation versus memory length under constant observation errors, with the best tested memory length marked in each panel. Columns show window and exponential memory, and rows show $b_A$ and $b_B$, at $L=\val{L}$. Error bars indicate one standard error; small horizontal marker offsets separate overlapping series.}
+\label{fig:errors}
+\end{adjustwidth}
+\end{figure}
+
+Errors generally cause a larger decrease in cooperation when memory is longer, until cooperation approaches zero. At $b_A$, raising $\varepsilon$ from zero to $\val{n0.1}$ reduces $f_C$ from $\val{W1A-fc}$ to $\val{W1noiseA-fc}$ for $\W(\val{n1})$. For $\W(\val{n9})$, the corresponding decline is from $\val{W9A-fc}$ to $\val{W9noiseA-fc}$. For some parameter combinations, populations with longer memories lose all cooperators. Averaging more records therefore fails to compensate for giving less weight to the current action. The best result occurs at the shortest possible memory; the next length tested is $M=\val{n2}$.
+
+The measured gaps remain close to the approximation calculated from the strategy histories in runs with errors. At $b_A$ and $\varepsilon=\val{n0.1}$, $\delta_G$ is about $\val{W9noiseA-deltaAbout}\%$ for both rules $\W(\val{n9})$ and $\E(\val{n9})$. These small negative values mean that the measured gap is slightly below the approximation. The exact identity based on $C_y$ also holds when records contain errors.
+
+\subsection{Population size}
+Figure~\ref{fig:size} shows both average cooperation and the fraction of runs ending with only defectors for different population sizes. The three memory lengths retain the same order of cooperation at larger sizes for the values of $b$ and $\varepsilon$ studied. For $\W(\val{n9})$ at $L=\val{n200}$ and $b_A$, mean cooperation is $\val{L200M9eps0A-fc}$ without errors and $\val{L200M9eps0.02A-fc}$ with errors. The reduction from observation errors therefore remains visible as the population grows.
+
+\begin{figure}[htbp]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering\includegraphics[width=16.6cm]{fig07_population_size.pdf}
+\caption{Mean cooperation and all-defector fraction versus lattice size for $\W(\val{n1})$, $\W(\val{n9})$, and $\W(\val{n33})$. Solid and dashed lines indicate observation error rates zero and $\val{n0.02}$, respectively, at the selected values of $b$. Error bars indicate one standard error; horizontal marker offsets separate overlapping outcomes without shifting the curves.}
+\label{fig:size}
+\end{adjustwidth}
+\end{figure}
+
+Fluctuations in a finite population can remove the last cooperators and leave the lattice trapped in all-defection. Population size can therefore strongly affect how often cooperation disappears, even when the order between memory lengths stays the same. At $b_A$ with $\W(\val{n33})$ and $\varepsilon=\val{n0.02}$, the all-defector fraction is $\val{L50M33eps0.02A-abs}\%$ at $L=\val{n50}$. It is $\val{L100M33eps0.02A-abs}\%$ and $\val{L200M33eps0.02A-abs}\%$ at the two larger sizes. In contrast, all sampled $\W(\val{n9})$ populations at $b_B$ and $\varepsilon=\val{n0.02}$ reach all-defection even at the largest size.
+
+\section{Discussion}\label{sec:discussion}
+The question from statistical physics addressed here is how local memory changes the collective state of an interacting lattice system~\cite{szabo2007,perc2017}. Historical payoffs can preserve successful behavior~\cite{shu2019}, and memory of strategy persistence can make individuals less willing to change~\cite{xu2024}. Here, stored actions change which neighbor is chosen. For a given strategy configuration and the reputations after observation, Eqs.~\eqref{eq:reference} and~\eqref{eq:fermi} give the probability that site $i$ changes strategy:
+\[
+ p_i^{\mathrm{change}}=
+ \sum_{\substack{j\in\mathcal N_i\\s_j(t)\ne s_i(t)}}
+ P(j\mid i)\,\frac{1}{1+\exp[(g_i-g_j)/K]}.
+\]
+Only neighbors with the opposite strategy enter this sum. Memory thus affects transitions at cooperative boundaries through reference selection, while local arrangements determine payoffs. The global gap omits this neighborhood information.
+
+Under synchronous updating, for $M=1$ and $\varepsilon=0$, reputation equals the current strategy. In a neighborhood with $n_C$ cooperators, the probability of choosing a cooperator is
+\[
+ \sum_{\substack{j\in\mathcal N_i\\s_j(t)=1}}P(j\mid i)
+ =(1-w)\frac{n_C}{4}+w\frac{n_C(1+\eta)}{n_C+4\eta}.
+\]
+For $w>0$ and $0<n_C<4$, this exceeds $n_C/4$: reputation directly favors cooperators as references, while adoption still depends on payoffs. A new defector with an entirely cooperative past retains reputation $1-a$; a new cooperator with an entirely defective past has reputation $a$. These expressions describe the immediate effect of the current weight. Monotonic cooperation trends remain numerical observations, since memory also changes subsequent correlations and spatial configurations.
+
+Li et al.~\cite{li2025,li2026} use the frequency of cooperation within a finite window and find an intermediate optimum. Their sums end at $t-1$, corresponding to $\PP(\val{n0},m)$: even the shortest memory contains only the previous action. They choose neighbors in proportion to reputation and allow learning sensitivity to differ between individuals. Our main comparisons mix reputation preference with uniform choice and use the same sensitivity for everyone.
+
+The earlier study uses our weak dilemma payoffs; the later sets $S=\val{li2026S}$. Both use accumulated payoffs. Our normalization makes $K=\val{K}$ equivalent to $4bK=\val{rawNoiseCoefficient}b$ without normalization: $\val{rawNoiseA}$ at $b_A$ and $\val{rawNoiseB}$ at $b_B$. These values approach the mean sensitivity $\val{li2026KappaMean}$ in Ref.~\cite{li2026} and are about $\val{n5}$ times the value $\val{li2025KappaMean}$ in Ref.~\cite{li2025}. All three studies use synchronous updating.
+
+When neighbors are chosen in proportion to reputation, $f_C=\val{S3smallM9-fc}$ through $M=\val{n9}$ for $\eta=0$ (each neighbor is equally likely to be chosen if all reputations are zero) and $\eta=\val{liFloor}$, the floor specified by Li et al.~\cite{li2026} (Fig.~S3). At $\eta=\val{n0.01}$, the plateau ends at $M=\val{n5}$, and $f_C=\val{S3largeM9-fc}$ at $M=\val{n9}$. The range of this plateau therefore depends on $\eta$. When it is very small, defectors with zero reputation are almost never chosen if other neighbors have positive reputations. Choosing neighbors in proportion to reputation is thus insufficient to produce an intermediate optimum in our model. Figure~S3 also includes $\PP(0,m)$ with $w=\val{r2PastW}$, $\eta=\val{liFloor}$, $b=b_A$, and $\varepsilon=0$. All $\val{R}$ runs reach full cooperation at $m\in\{\val{r2PastFullGrid}\}$; mean cooperation is $\val{r2Past10fc}$ and $\val{r2Past20fc}$ at $m=\val{r2PastLongOne}$ and $\val{r2PastLongTwo}$. Excluding the current action therefore produces no distinct intermediate optimum in this comparison. The case $a=0$ has not been tested with the mixed selection rule at $w=\val{w}$, and differences in payoffs and learning sensitivity from Li et al. remain.
+
+Reputation also interacts with punishment~\cite{brandt2003}, group formation~\cite{yang2018preprint}, and adaptive learning~\cite{li2025,li2026}. Experiments also link reputation to network formation~\cite{cuesta2015}. Unlike indirect reciprocity~\cite{sasaki2017}, our actions remain unconditional; errors affect only the shared record used for imitation.
+
+Increasing $\eta$ keeps the effects of the present and the past in the same directions (Fig.~S1). However, at $b_B$ the larger value reduces cooperation to $\val{etaW9B-fc}$ for $\W(\val{n9})$ and eliminates it for $\PP(\val{n0.1},\val{n8})$. Updating individuals one at a time in random order keeps the same ordering between memory lengths, but reduces their effect (Fig.~S2). At $b_A$, the difference in cooperation between $\W(\val{n1})$ and $\W(\val{n33})$ falls from $\val{memoryDifferencesync}$ under synchronous updating to $\val{memoryDifferencesequential}$ under sequential updating. This happens because sequential updating lowers cooperation for $\W(\val{n1})$ and raises it for $\W(\val{n33})$.
+
+The results concern a weak dilemma on a fixed lattice with unconditional strategies and the specified payoff normalization, sensitivity, and reputation offset. Their validity throughout the interior of the prisoner's dilemma region remains untested. Cooperation has not been compared with uniform reference selection at $w=0$, so the decrease with memory is relative to shorter memories under reputation bias. Absorption and residual drift concern finite populations over the simulated period; the maps therefore describe measured regimes, without establishing a critical point or universality class. No intermediate optimum was found for the mixed selection rule among the tested parameters and error rates up to $\val{n0.1}$.
+
+Future work could consider reputation in the comparison of payoffs, conditional strategies, or networks that change over time. In these cases, remembering past actions may affect cooperation in other ways.
+
+\section{Conclusion}\label{sec:conclusion} 
+In this stochastic lattice model, longer memory reduces cooperation through both a smaller current weight and a longer past. Using only the current action gives the highest cooperation among the tested cases, including observation error probabilities up to $\val{n0.1}$. The gap relates this behavior to strategy persistence, while local arrangements and payoffs also govern imitation. These results concern the specified weak dilemma and selection rules; they differ from the intermediate optima found by Li et al.~\cite{li2025,li2026}.
+
+\supplementary{Figure S1: reputation offset; Figure S2: update order; Figure S3: proportional selection with current or previous actions. Reference~\cite{li2026} is cited in the supplement.}
+\authorcontributions{Conceptualization, methodology, writing---original draft preparation, writing---review and editing, and supervision, P.H.T.S.; methodology, software, P.A.; investigation (literature review), writing---review and editing, M.A.R.F., W.L.B., and A.R.S.}
+\funding{PHTS is supported by grant \#421779/2022-5 of Conselho Nacional de Desenvolvimento Cient\'ifico e Tecnol\'ogico (CNPq) and grant \#2022/16196-0 of S\~ao Paulo Research Foundation (FAPESP). PA, MARF, WLB, ARS are supported by scholarship grants \#88887.335291/2026-00, \#88887.760065/2022-00, \#88887.690818/2022-00, \#88887.940868/2024-00 of Coordena\c{c}\~ao de Aperfei\c{c}oamento de Pessoal de N\'ivel Superior (CAPES).}
+\institutionalreview{Not applicable.}
+\informedconsent{Not applicable.}
+\dataavailability{Simulation code, parameters, seeds, individual results, and the residual drift table are available at \url{https://github.com/labdinpop/reputation-memory}.}
+\acknowledgments{Codex (OpenAI) assisted with code, analysis scripts, and manuscript drafting. The authors take responsibility for the analyses and content.}
+
+\conflictsofinterest{The authors declare no conflicts of interest.}
+\label{lastmainpage}
+\reftitle{References}
+\bibliography{referencias}
+\end{document}

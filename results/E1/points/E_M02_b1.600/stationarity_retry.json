@@ -1,0 +1,7 @@
+{
+  "reason": "More than 10% of realizations differ by over .02 between measurement halves",
+  "first_T0": 5000,
+  "retry_T0": 10000,
+  "R": 30,
+  "nonstationary_fraction": 0.26666666666666666
+}

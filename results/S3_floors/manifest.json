@@ -1,0 +1,8 @@
+{
+  "source_sha256": {
+    "src/model.py": "17342fcbf5fc963a04ce77bd6e564a5cc7efd19c960d661d565297297c7b5a3c",
+    "src/model_s3.py": "39746759b1ad1755b46234fa32c5ea13a2984318a7d227b34e285c7971c4f562",
+    "src/run_s3_floors.py": "c4aa3f2b5af994dfeed10891c63b103b7b5b8fa3c501a0ecb059d3cb311224fa",
+    "config/S3_floors.json": "7c2309261266a3a1e22d0df2113d38ac72eb476e646de89cc09cb93f48c9d25b"
+  }
+}

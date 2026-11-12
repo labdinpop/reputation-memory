@@ -1,0 +1,56 @@
+[
+  {
+    "b_label": "A",
+    "b": 1.15,
+    "M": 1,
+    "T0": 5000,
+    "representative_realization": 27,
+    "selection_rule": "Middle realization in stable sort by f_C; final state shown, no visual selection",
+    "file": "W_M01_b1.150_T05000_r27.npy"
+  },
+  {
+    "b_label": "A",
+    "b": 1.15,
+    "M": 9,
+    "T0": 5000,
+    "representative_realization": 20,
+    "selection_rule": "Middle realization in stable sort by f_C; final state shown, no visual selection",
+    "file": "W_M09_b1.150_T05000_r20.npy"
+  },
+  {
+    "b_label": "A",
+    "b": 1.15,
+    "M": 33,
+    "T0": 5000,
+    "representative_realization": 0,
+    "selection_rule": "Middle realization in stable sort by f_C; final state shown, no visual selection",
+    "file": "W_M33_b1.150_T05000_r00.npy"
+  },
+  {
+    "b_label": "B",
+    "b": 1.3,
+    "M": 1,
+    "T0": 5000,
+    "representative_realization": 28,
+    "selection_rule": "Middle realization in stable sort by f_C; final state shown, no visual selection",
+    "file": "W_M01_b1.300_T05000_r28.npy"
+  },
+  {
+    "b_label": "B",
+    "b": 1.3,
+    "M": 9,
+    "T0": 5000,
+    "representative_realization": 9,
+    "selection_rule": "Middle realization in stable sort by f_C; final state shown, no visual selection",
+    "file": "W_M09_b1.300_T05000_r09.npy"
+  },
+  {
+    "b_label": "B",
+    "b": 1.3,
+    "M": 33,
+    "T0": 5000,
+    "representative_realization": 15,
+    "selection_rule": "Middle realization in stable sort by f_C; final state shown, no visual selection",
+    "file": "W_M33_b1.300_T05000_r15.npy"
+  }
+]

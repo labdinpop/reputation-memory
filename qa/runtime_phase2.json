@@ -1,0 +1,162 @@
+{
+  "workers": 16,
+  "model_sha256": "17342fcbf5fc963a04ce77bd6e564a5cc7efd19c960d661d565297297c7b5a3c",
+  "experiments": {
+    "E3": {
+      "profiles": [
+        {
+          "parameters": {
+            "kernel": "PP",
+            "L": 100,
+            "b": 1.15,
+            "a": 0.05,
+            "m": 32,
+            "epsilon": 0.0,
+            "w": 0.5,
+            "K": 0.1,
+            "eta": 1e-06,
+            "update": "synchronous"
+          },
+          "seconds": 2.750499399990076,
+          "coexistence_samples": 200
+        }
+      ],
+      "new_realizations": 2940,
+      "reused_realizations": 0,
+      "points": 98,
+      "worker_hours": 2.2462411766585624,
+      "estimated_elapsed_minutes": 12.033434874956583
+    },
+    "E5": {
+      "profiles": [
+        {
+          "parameters": {
+            "kernel": "W",
+            "L": 100,
+            "b": 1.15,
+            "M": 33,
+            "epsilon": 0.1,
+            "w": 0.5,
+            "K": 0.1,
+            "eta": 1e-06,
+            "update": "synchronous"
+          },
+          "seconds": 2.5599390999996103,
+          "coexistence_samples": 0
+        },
+        {
+          "parameters": {
+            "kernel": "E",
+            "L": 100,
+            "b": 1.15,
+            "M": 33,
+            "epsilon": 0.1,
+            "w": 0.5,
+            "K": 0.1,
+            "eta": 1e-06,
+            "update": "synchronous"
+          },
+          "seconds": 2.599867399985669,
+          "coexistence_samples": 0
+        }
+      ],
+      "new_realizations": 4200,
+      "reused_realizations": 840,
+      "points": 168,
+      "worker_hours": 3.009887124991413,
+      "estimated_elapsed_minutes": 16.124395312454
+    },
+    "E6": {
+      "profiles": [
+        {
+          "parameters": {
+            "kernel": "W",
+            "L": 100,
+            "b": 1.15,
+            "M": 33,
+            "epsilon": 0.02,
+            "w": 0.5,
+            "K": 0.1,
+            "eta": 1e-06,
+            "update": "synchronous"
+          },
+          "seconds": 2.7939105999830645,
+          "coexistence_samples": 200
+        }
+      ],
+      "new_realizations": 600,
+      "reused_realizations": 360,
+      "points": 36,
+      "worker_hours": 0.8148905916617272,
+      "estimated_elapsed_minutes": 4.365485312473538
+    },
+    "S1": {
+      "profiles": [
+        {
+          "parameters": {
+            "kernel": "PP",
+            "L": 100,
+            "b": 1.15,
+            "a": 0.1,
+            "m": 8,
+            "epsilon": 0.0,
+            "w": 0.5,
+            "K": 0.1,
+            "eta": 0.01,
+            "update": "synchronous"
+          },
+          "seconds": 3.0005623000033665,
+          "coexistence_samples": 200
+        },
+        {
+          "parameters": {
+            "kernel": "W",
+            "L": 100,
+            "b": 1.15,
+            "M": 9,
+            "epsilon": 0.0,
+            "w": 0.5,
+            "K": 0.1,
+            "eta": 0.01,
+            "update": "synchronous"
+          },
+          "seconds": 3.008117299992591,
+          "coexistence_samples": 200
+        }
+      ],
+      "new_realizations": 420,
+      "reused_realizations": 0,
+      "points": 14,
+      "worker_hours": 0.3501915183335465,
+      "estimated_elapsed_minutes": 1.8760259910725705
+    },
+    "S2": {
+      "profiles": [
+        {
+          "parameters": {
+            "kernel": "W",
+            "L": 100,
+            "b": 1.15,
+            "M": 33,
+            "epsilon": 0.0,
+            "w": 0.5,
+            "K": 0.1,
+            "eta": 1e-06,
+            "update": "sequential"
+          },
+          "seconds": 7.408989899995504,
+          "coexistence_samples": 200
+        }
+      ],
+      "new_realizations": 2250,
+      "reused_realizations": 0,
+      "points": 75,
+      "worker_hours": 4.63061868749719,
+      "estimated_elapsed_minutes": 24.806885825877803
+    }
+  },
+  "assumptions": "Full protocol at L=100; early absorption disabled; cost scales with site count; 70% parallel efficiency. No stationarity retries or I/O included; timing outputs excluded from scientific data.",
+  "total_worker_hours": 11.05182909914244,
+  "total_estimated_elapsed_minutes": 59.20622731683449,
+  "E1_E6_worker_hours": 25.48814489331926
+}
