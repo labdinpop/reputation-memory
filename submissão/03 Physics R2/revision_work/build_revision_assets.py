@@ -12,7 +12,8 @@ from matplotlib.ticker import FixedLocator, FuncFormatter
 WORK=Path(__file__).resolve().parent
 OUT=WORK.parent
 ROOT=OUT.parents[1]
-SRC=OUT/'sources'
+# The project edits artigo first; an extracted data release keeps its portable layout.
+SRC=ROOT/'artigo' if (ROOT/'artigo').is_dir() else OUT/'sources'
 DATA=OUT/'revision_data'
 DATA.mkdir(exist_ok=True)
 

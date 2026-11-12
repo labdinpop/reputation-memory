@@ -1,65 +1,68 @@
-# Reputation memory and spatial cooperation: research data
+# Reputation memory and spatial cooperation
 
-Data and code accompanying *The Influence of Reputation Memory on Cooperation
-in a Spatial Prisoner's Dilemma* (Physics submission physics-4642818).
-
-Repository: [labdinpop/reputation-memory](https://github.com/labdinpop/reputation-memory).
+Code and data accompanying *The Influence of Reputation Memory on Cooperation
+in a Spatial Prisoner's Dilemma*.
 
 Authors: Pedro Henrique Triguis Schimit, Pedro Aranha, Marco A. R. Fontoura,
 Wellington de Lima Barreto, and Abimael R. Sergio.
 
-## Start here
+## What the model studies
 
-- [Residual drift table](residual_drift.csv): the 14 parameter combinations
-  discussed in the reply to Reviewer 2, comment 2. This is a supplementary
-  data table derived from saved simulation results. The reply itself displays
-  the table; this CSV provides an electronic copy with additional metadata.
-- [Column definitions](DATA_DICTIONARY.md): meaning of each column and the
-  criterion used to identify residual drift.
-- [Configuration files](config/): simulation parameters.
-- [Results](results/): individual realizations, summaries, and saved outputs.
-- [Code](src/): model implementation, simulation drivers, and analysis.
-- [Validation records](qa/): checks supplied with the data release.
-- [Reproduction instructions](README_R2.txt): how the added numerical values
-  and supplementary comparison were generated from completed runs.
+Individuals occupy a square lattice and play a weak prisoner's dilemma with
+their nearest neighbors. Public reputation influences which neighbor they
+consider imitating. The study compares finite-window, exponential, and
+present–past memory rules to examine how the weight of the current action,
+the length of the historical record, observation errors, and population size
+affect cooperation.
 
-The `source` column in the drift table is a path relative to this directory.
-It links each row to the saved realizations used to calculate its count.
-It is a provenance field, not a bibliographic reference. All 14 paths resolve
-within this data collection.
+## Repository contents
 
-## Interpreting the results
+| Location | Contents |
+| --- | --- |
+| [src/](src/) | Model implementations, simulation drivers, and analysis scripts. |
+| [config/](config/) | Parameter grids and simulation settings. |
+| [results/](results/) | Individual realizations, summaries, and spatial configurations. |
+| [qa/](qa/) | Saved numerical checks and diagnostic records. |
+| [residual_drift.csv](residual_drift.csv) | Parameter combinations with residual temporal drift after extending the transient. |
+| [DATA_DICTIONARY.md](DATA_DICTIONARY.md) | Definitions of parameters, measurements, summary columns, and drift diagnostics. |
+| [REPRODUCIBILITY.md](REPRODUCIBILITY.md) | Dependencies and instructions for reading and reanalyzing the data. |
 
-Each row in `residual_drift.csv` represents one distinct parameter combination
-after the selected extension of the transient. The 14 rows are not 14
-realizations. `R` gives the number of independent realizations, and
-`drifting_realizations` gives the number that exceeded the drift criterion.
+## Simulation groups
 
-Some result directories contain successive transient durations. Use the
-`source` fields in the tables to identify the selected output; do not combine
-earlier and extended runs as independent replicates of the final estimate.
-Empty cells in the drift table identify parameters that do not apply to the
-memory rule in that row. They do not represent zero.
+| Directory under results/ | Question |
+| --- | --- |
+| E1 | Cooperation as a function of temptation payoff and memory length. |
+| E2 | Spatial configurations associated with selected parameter combinations. |
+| E3 | Separate effects of the weight of the current action and the length of the past window. |
+| E4 | Reputation gaps and temporal correlations extracted from the simulated dynamics. |
+| E5 | Effects of observation errors. |
+| E6 | Effects of lattice size. |
+| S1 | Sensitivity to the reputation offset. |
+| S2 | Comparison of synchronous and sequential strategy updates. |
+| S3, S3_floors, S3_past | Proportional reference selection, reputation offsets, and the use of current versus past actions. |
+| transient_refinement | Results from extended transient durations. |
 
-The lattice side length is `L`; the population contains `L * L` sites.
-Absorption fractions describe the finite populations and simulation durations
-reported in the manuscript.
+## Reading the data
 
-## Reproducing the supplementary table
+The lattice side length is `L`, so the population contains `L * L` individuals.
+Each realization uses a recorded random seed. The outputs include mean
+cooperation, absorption indicators, reputation gaps, and temporal correlations.
+Summary tables report averages and standard errors across realizations.
 
-The script `submissão/03 Physics R2/revision_work/build_revision_assets.py`
-reads saved results and regenerates the residual drift table, added numerical
-macros, and revised Figure S3. See `README_R2.txt` for its directory layout and
-dependencies. It does not launch new simulations. Simulation drivers named
-`run_*.py` do launch simulations and are not needed to inspect these data.
+Some parameter points have outputs for more than one transient duration.
+The `source` column identifies the selected result file using a path relative
+to the repository root. This preserves the connection between summaries and
+individual realizations.
 
-`revision_numbers_sources.json` records the origin of the numerical additions.
-The complete manuscript sources are distributed separately in
-`manuscript_sources.zip`.
+The residual drift table contains 14 distinct parameter combinations. `R` is
+the number of realizations, and `drifting_realizations` counts those exceeding
+the drift criterion. Empty parameter cells indicate values that do not apply
+to that memory rule. Definitions are given in the data dictionary.
 
-## File integrity
+## Reanalysis
 
-This release retains all files from the previous data archive and includes
-the completed auxiliary comparison and supporting code used in revision 2.
-`SHA256SUMS.txt` lists the SHA-256 digest of every other file in the release.
-No new simulations were run to prepare the editorial revision.
+The CSV and JSON files can be inspected without running simulations.
+Python scripts regenerate summaries and figures from the saved outputs.
+See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for the available commands.
+
+`SHA256SUMS.txt` lists the SHA-256 digest of each distributed file.

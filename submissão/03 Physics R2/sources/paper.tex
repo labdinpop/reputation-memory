@@ -24,10 +24,12 @@
 \hreflink{https://doi.org/}
 \Title{The Influence of Reputation Memory on Cooperation in a Spatial Prisoner's Dilemma}
 \TitleCitation{The Influence of Reputation Memory on Cooperation in a Spatial Prisoner's Dilemma}
-\Author{Pedro H. T. Schimit $^{1,*}$, Pedro Aranha $^{1}$, Marco A. R. Fontoura $^{1}$, Wellington de Lima Barreto $^{1}$ and Abimael R. S\'ergio $^{1}$}
+\Author{Pedro H. T. Schimit $^{1,*}$, Pedro Aranha $^{1}$, Marco A. R. Fontoura $^{1,2}$,\\ Wellington de Lima Barreto $^{1}$ and Abimael R. S\'ergio $^{1}$}
 \AuthorNames{Pedro H. T. Schimit, Pedro Aranha, Marco A. R. Fontoura, Wellington de Lima Barreto and Abimael R. S\'ergio}
 \AuthorCitation{Schimit, P.H.T.; Aranha, P.; Fontoura, M.A.R.; Barreto, W.L.; S\'ergio, A.R.}
-\address[1]{Informatics and Knowledge Management Graduate Program, Universidade Nove de Julho, S\~ao Paulo, Brazil}
+\address{%
+$^{1}$ \quad Informatics and Knowledge Management Graduate Program, Universidade Nove de Julho, S\~ao Paulo, Brazil\\
+$^{2}$ \quad Departamento Acad\^emico, FIAP -- Centro Universit\'ario, S\~ao Paulo, Brazil}
 \corres{Correspondence: schimit@alumni.usp.br}
 \abstract{Spatial evolutionary games provide a setting for studying collective behavior in nonequilibrium statistical physics. We examine how memory changes cooperation in a weak prisoner's dilemma, where public reputation influences which lattice neighbor is chosen for imitation. Increasing the number of remembered actions also reduces the weight of the current action. We separate these effects by comparing window and exponential memory with a rule that varies the current weight and the number of past rounds independently. Longer memories reduce cooperation when neighbor choice combines reputation with random sampling. Giving more weight to the current action increases cooperation, while extending the past reduces it even when that weight is fixed. We relate these changes in the population to the reputation difference between current cooperators and defectors and to temporal correlations of their strategies. Using only the current action gives the highest cooperation among the cases studied, including observation error probabilities up to \val{n0.1}. Errors generally cause larger losses with longer memories. The results show how retaining information about previous states can weaken cooperation in a stochastic lattice system whose local updates depend on that information.}
 \keyword{nonequilibrium statistical physics; collective behavior; spatial evolutionary games; reputation; memory; cooperation}
@@ -306,6 +308,7 @@ In this stochastic lattice model, longer memory reduces cooperation through both
 \supplementary{Figure S1: reputation offset; Figure S2: update order; Figure S3: proportional selection with current or previous actions. Reference~\cite{li2026} is cited in the supplement.}
 \authorcontributions{Conceptualization, methodology, writing---original draft preparation, writing---review and editing, and supervision, P.H.T.S.; methodology, software, P.A.; investigation (literature review), writing---review and editing, M.A.R.F., W.L.B., and A.R.S.}
 \funding{PHTS is supported by grant \#421779/2022-5 of Conselho Nacional de Desenvolvimento Cient\'ifico e Tecnol\'ogico (CNPq) and grant \#2022/16196-0 of S\~ao Paulo Research Foundation (FAPESP). PA, MARF, WLB, ARS are supported by scholarship grants \#88887.335291/2026-00, \#88887.760065/2022-00, \#88887.690818/2022-00, \#88887.940868/2024-00 of Coordena\c{c}\~ao de Aperfei\c{c}oamento de Pessoal de N\'ivel Superior (CAPES).}
+\enlargethispage{1.5\baselineskip}
 \institutionalreview{Not applicable.}
 \informedconsent{Not applicable.}
 \dataavailability{Simulation code, parameters, seeds, individual results, and the residual drift table are available at \url{https://github.com/labdinpop/reputation-memory}.}
